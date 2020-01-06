@@ -1,0 +1,36 @@
+[LGU Information]
+PIN  : 154
+Name : Tagbilaran
+Type : City
+
+
+[GDX App Server]
+OS  : Ubuntu 18.04 LTS
+IP  : 192.168.101.253
+User: rcasas
+Pass: nouia81
+
+
+[ETRACS App Server]
+OS  : Centos-7
+IP  : 192.168.101.250
+User: root
+Pass: nouia81
+
+
+[Database Server]
+Type: MySQL
+IP  : 192.168.101.251
+Port: 3306
+User: root
+Pass: cto154
+
+
+[Web Management Tools]
+
+Portainer-URL : http://192.168.254.121:9000
+Portainer-User: admin
+Portainer-Pass: p@ssw0rd
+
+Webmin-URL : https://192.168.254.121:10000
+Webmin-User: root
