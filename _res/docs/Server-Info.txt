@@ -26,11 +26,23 @@ User: root
 Pass: cto154
 
 
-[Web Management Tools]
+[Web Mgmt Tool - ETRACS]
 
-Portainer-URL : http://192.168.254.121:9000
+Portainer-URL : http://192.168.101.250:9000
 Portainer-User: admin
 Portainer-Pass: p@ssw0rd
 
-Webmin-URL : https://192.168.254.121:10000
+Webmin-URL : https://192.168.101.250:10000
 Webmin-User: root
+Webmin-Pass: nouia81
+
+
+[Web Mgmt Tool - GDX]
+
+Portainer-URL : http://192.168.101.253:9000
+Portainer-User: admin
+Portainer-Pass: p@ssw0rd
+
+Webmin-URL : https://192.168.101.253:10000
+Webmin-User: rcasas
+Webmin-Pass: nouia81
