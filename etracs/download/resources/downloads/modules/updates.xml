@@ -20,8 +20,14 @@ entity.app.context=etracs25
 
 </env>
 <modules> 
-
 	<!-- custom -->
+	<module file="custom/tagb-recibo.jar" version="1.21"/>
+	<module file="custom/permit.jar" version="1.28"/>
+	<module file="custom/tagb-bpls.jar" version="1.23"/>
+	<module file="custom/tagb-logo.jar" version="1.41"/>
+	<module file="custom/rpt-custom-report.jar" version="1.18"/>
+	<module file="custom/treasury-custom-report.jar" version="1.0"/>
+	<module file="custom/gov-lgu-tagbilaran-treasury.jar" version="1.1"/>
 
 	<!-- core libraries -->
 	<module file="core/osiris2-client-themes.jar" version="2.55"/>
@@ -81,9 +87,9 @@ entity.app.context=etracs25
 	<module file="rameses-gov-etracs-rptis.jar" version="2.55"/>
 	<module file="rameses-gov-etracs-rptis-report.jar" version="2.55"/>
 	<module file="rameses-gov-etracs-signatory-template.jar" version="2.55"/>
-	<module file="rameses-gov-etracs-rptis-transmittal.jar" version="2.55"/>
 
 	<!-- plugins -->	
 	<module file="plugins/rameses-queueing.jar" version="2.55"/>
+	<module file="plugins/rameses-gov-etracs-ctc.jar" version="2.55"/>
 </modules>
 </app>
