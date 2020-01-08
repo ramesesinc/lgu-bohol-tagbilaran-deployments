@@ -18,6 +18,8 @@ socketio.host=192.168.101.250:7080
 entity.app.host=192.168.101.250:8070
 entity.app.context=etracs25
 
+vehicle.app.host=192.168.101.250:8072
+vehicle.app.context=enterprise
 </env>
 <modules> 
 
@@ -85,5 +87,7 @@ entity.app.context=etracs25
 
 	<!-- plugins -->	
 	<module file="plugins/rameses-queueing.jar" version="2.55"/>
+	<module file="plugins/rameses-gov-etracs-vehicle.jar" version="1.0"/>
+
 </modules>
 </app>
