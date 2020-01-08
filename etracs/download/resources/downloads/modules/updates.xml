@@ -1,6 +1,6 @@
 <app>
 <env>
-app.title=ETRACS 2.5 build 05 20191218_1100 (CITY OF TAGBILARAN)
+app.title=ETRACS 2.5 build 05 20200107_1330 (CITY OF TAGBILARAN)
 app.host=192.168.101.250:8070
 app.cluster=osiris3
 app.context=etracs25
@@ -22,16 +22,22 @@ vehicle.app.host=192.168.101.250:8072
 vehicle.app.context=enterprise
 </env>
 <modules> 
-
 	<!-- custom -->
+	<module file="custom/tagb-recibo.jar" version="1.21"/>
+	<module file="custom/permit.jar" version="1.28"/>
+	<module file="custom/tagb-bpls.jar" version="1.23"/>
+	<module file="custom/tagb-logo.jar" version="1.41"/>
+	<module file="custom/rpt-custom-report.jar" version="1.18"/>
+	<module file="custom/treasury-custom-report.jar" version="1.0"/>
+	<module file="custom/gov-lgu-tagbilaran-treasury.jar" version="1.1"/>
 
 	<!-- core libraries -->
 	<module file="core/osiris2-client-themes.jar" version="2.55"/>
-	<module file="core/osiris2-client-ui.jar" version="2.55"/>
+	<module file="core/osiris2-client-ui.jar" version="2.57"/>
 	<module file="core/osiris2-draw.jar" version="2.55"/>
 	<module file="core/osiris2-framework.jar" version="2.55"/>
 	<module file="core/osiris2-report.jar" version="2.55"/>
-	<module file="core/rameses-client-ui.jar" version="2.55"/>
+	<module file="core/rameses-client-ui.jar" version="2.57"/>
 	<module file="core/rameses-client-ui-bio.jar" version="2.55"/>
 	<module file="core/rameses-client-ui-jfx.jar" version="2.55"/>
 	<module file="core/rameses-client-notification-socketio.jar" version="2.55"/>
@@ -83,11 +89,10 @@ vehicle.app.context=enterprise
 	<module file="rameses-gov-etracs-rptis.jar" version="2.55"/>
 	<module file="rameses-gov-etracs-rptis-report.jar" version="2.55"/>
 	<module file="rameses-gov-etracs-signatory-template.jar" version="2.55"/>
-	<module file="rameses-gov-etracs-rptis-transmittal.jar" version="2.55"/>
 
 	<!-- plugins -->	
 	<module file="plugins/rameses-queueing.jar" version="2.55"/>
 	<module file="plugins/rameses-gov-etracs-vehicle.jar" version="1.0"/>
-
+	<module file="plugins/rameses-gov-etracs-ctc.jar" version="2.55"/>
 </modules>
 </app>
