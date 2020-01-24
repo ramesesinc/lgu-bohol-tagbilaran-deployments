@@ -38,4 +38,4 @@ services:
       - "8571:8571"
 
     volumes:
-      - ../_custom/connections:/apps/server/apps/gdx/connections
+      - ../_custom/connections:/apps/server/apps/gdx/connections/ext
