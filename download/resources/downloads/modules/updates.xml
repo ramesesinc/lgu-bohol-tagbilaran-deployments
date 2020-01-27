@@ -101,8 +101,8 @@ waterworks.app.context=enterprise
 	<module file="rptis/rameses-gov-etracs-rptis-report.jar" version="2.50"/>
 
 	<!-- vehicle -->
-	<module file="vehicle/rameses-gov-etracs-vehicle-tagbilaran.jar" version="1.01"/>
-	<module file="vehicle/rameses-gov-etracs-vehicle.jar" version="1.00"/>
+	<module file="vehicle/rameses-gov-etracs-vehicle-tagbilaran.jar" version="1.02"/>
+	<module file="vehicle/rameses-gov-etracs-vehicle.jar" version="1.01"/>
 	
 
 	<!-- waterworks -->
