@@ -5,7 +5,6 @@
 .shutdown_pid
 Thumbs.db
 updates-dev.xml
+video.conf
 *.mp4
-videos.conf
-queue/resources/files
-queue/resources/css
+_custom
