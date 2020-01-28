@@ -18,3 +18,4 @@ services:
     volumes:
       - ./vehicleds:/apps/server/services/datasources/mainds
       - ./connections:/apps/server/services/apps/enterprise/connections/ext
+      - ./temp/rameses-gov-etracs-vehicle-services.jar:/apps/server/services/apps/enterprise/modules/rameses-gov-etracs-vehicle-services.jar
