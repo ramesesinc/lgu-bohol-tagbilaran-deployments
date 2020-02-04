@@ -39,4 +39,4 @@ services:
       - "8080:8080"
     volumes:
       - ../_res/connections:/apps/etracs25/connections/ext
-      - ./modules:/modules
+      - ./modules:/apps/etracs25/modules
