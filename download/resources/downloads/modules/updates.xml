@@ -104,7 +104,7 @@ waterworks.app.context=enterprise
 
 	<!-- vehicle -->
 	<module file="vehicle/rameses-gov-etracs-vehicle-tagbilaran.jar" version="1.04"/>
-	<module file="vehicle/rameses-gov-etracs-vehicle.jar" version="1.04"/>
+	<module file="vehicle/rameses-gov-etracs-vehicle.jar" version="1.05"/>
 
 	<!-- waterworks -->
 	<module file="waterworks/rameses-gov-etracs-waterworks.jar" version="1.00"/>
