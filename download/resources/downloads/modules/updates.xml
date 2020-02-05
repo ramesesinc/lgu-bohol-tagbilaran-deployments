@@ -21,7 +21,7 @@ entity.app.context=etracs25
 vehicle.app.host=192.168.101.62:8072
 vehicle.app.context=enterprise
 
-waterworks.app.host=192.168.101.62:8076
+waterworks.app.host=192.168.101.63:8076
 waterworks.app.context=enterprise
 
 </env>
