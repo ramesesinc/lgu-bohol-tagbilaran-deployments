@@ -1,5 +1,5 @@
 dialect=mysql
 driverClass=com.mysql.jdbc.Driver
-url=jdbc:mysql://${dbserver_host}/${waterworks_db}
-user=${dbserver_user}
-pwd=${dbserver_pass}
+url=jdbc:mysql://${waterdb_host}/${waterdb_name}
+user=${waterdb_user}
+pwd=${waterdb_pass}
