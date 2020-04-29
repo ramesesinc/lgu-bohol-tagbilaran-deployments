@@ -1,0 +1,18 @@
+1. Add an entry in _custom/env.conv file
+
+   waterworks_app_server =<ip of waterworks app server>
+   waterworks_db_server =<ip of waterworks db server>
+
+
+2. Edit waterworksds file and change dbname, root and pwd.   
+   Copy the waterworksds to _custom/datasources/waterworksds
+   Copy local-waterworks-server to _custom/connections/local-waterworks-server
+
+
+3. The waterworks_app_server is referenced in the ff files:
+   local-waterworks-server
+   waterworksds
+   client/updates.pyml
+   client/waterworks-updates.pyml
+
+4. Restore the database
