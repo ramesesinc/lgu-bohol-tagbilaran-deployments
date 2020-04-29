@@ -1,0 +1,11 @@
+app:
+
+  env:
+    "waterworks.app.host"    : ${waterworks_server_ip}:8076
+    "waterworks.app.context" : "enterprise"
+
+  modules:
+    - { file: "modules/waterworks/rameses-gov-etracs-waterworks2.jar" , version: 1.0, order: 300 }
+    - { file: "modules/waterworks/rameses-gov-etracs-waterworks-report.jar" , version: 1.0, order: 300 }
+
+    
