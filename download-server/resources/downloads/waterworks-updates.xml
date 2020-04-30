@@ -1,6 +1,6 @@
 <app>
   <env>
-  title=ETRACS 2.5 build 05 20200131_1705 (CITY OF TAGBILARAN)
+  title=undefined
   app.host=localhost:8070
   app.cluster=osiris3
   app.context=etracs25
@@ -12,14 +12,12 @@
   socketio.host=localhost:7080
   entity.app.host=localhost:8070
   entity.app.context=etracs25
-  report.custom=tagbilaran
-  app.custom=tagbilaran
-  waterworks.app.host=undefined:8076
+  waterworks.app.host=localhost:8076
   waterworks.app.context=enterprise
   </env>
   <modules>
-    <module file="modules/custom/waterworks/tagbilaran-waterworks-reports.jar" version="1" order="50"  />
     <module file="modules/shared/rameses-client-report.jar" version="2.5" order="200"  />
+    <module file="modules/core/osiris2-client-themes.jar" version="2.5" order="200"  />
     <module file="modules/core/osiris2-draw.jar" version="2.5" order="200"  />
     <module file="modules/core/osiris2-framework.jar" version="2.5" order="200"  />
     <module file="modules/core/osiris2-report.jar" version="2.5" order="200"  />
@@ -48,8 +46,7 @@
     <module file="modules/etracs/rameses-gov-etracs-tools.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-gov-lgu.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-gov-etracs-signatory-template.jar" version="2.5" order="200"  />
-    <module file="modules/core/osiris2-client-themes.jar" version="2.5" order="200"  />
-    <module file="modules/waterworks/rameses-gov-etracs-waterworks2.jar" version="1" order="300"  />
+    <module file="modules/waterworks/rameses-gov-etracs-waterworks2.jar" version="1.01" order="300"  />
     <module file="modules/waterworks/rameses-gov-etracs-waterworks-report.jar" version="1" order="300"  />
   </modules>
 </app>
