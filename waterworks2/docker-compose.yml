@@ -18,4 +18,5 @@ services:
     volumes:
       - ../_custom/datasources/waterworksds:/apps/server/services/datasources/mainds
       - ../_custom/connections:/apps/server/services/apps/enterprise/connections/ext
+      - ./temp/rameses-gov-etracs-waterworks-services2.jar:/apps/server/services/apps/enterprise/modules/rameses-gov-etracs-waterworks-services2.jar
 

@@ -35,18 +35,18 @@
     <module file="modules/core/osiris2-client-ui.jar" version="2.5" order="200"  />
     <module file="modules/shared/rameses-rules-mgmt.jar" version="2.5" order="200"  />
     <module file="modules/shared/rameses-workflow-mgmt.jar" version="2.5" order="200"  />
-    <module file="modules/shared/rameses-enterprise.jar" version="2.5" order="200"  />
+    <module file="modules/shared/rameses-enterprise.jar" version="2.51" order="200"  />
     <module file="modules/shared/rameses-enterprise-admin.jar" version="2.5" order="200"  />
-    <module file="modules/shared/rameses-enterprise-entity.jar" version="2.5" order="200"  />
-    <module file="modules/shared/rameses-enterprise-entity-tool.jar" version="2.5" order="200"  />
     <module file="modules/shared/rameses-enterprise-financial.jar" version="2.5" order="200"  />
     <module file="modules/treasury/rameses-treasury-common.jar" version="2.51" order="200"  />
     <module file="modules/etracs/rameses-etracs-main.jar" version="2.5" order="200"  />
-    <module file="modules/etracs/rameses-gov-etracs-entity.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-gov-etracs-tools.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-gov-lgu.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-gov-etracs-signatory-template.jar" version="2.5" order="200"  />
-    <module file="modules/waterworks/rameses-gov-etracs-waterworks2.jar" version="1.01" order="300"  />
-    <module file="modules/waterworks/rameses-gov-etracs-waterworks-report.jar" version="1" order="300"  />
+    <module file="modules/entity/rameses-enterprise-entity.jar" version="2.5" order="200"  />
+    <module file="modules/entity/rameses-enterprise-entity-tool.jar" version="2.5" order="200"  />
+    <module file="modules/entity/rameses-gov-etracs-entity.jar" version="2.5" order="200"  />
+    <module file="modules/waterworks/rameses-gov-etracs-waterworks2.jar" version="1.02" order="300"  />
+    <module file="modules/waterworks/rameses-gov-etracs-waterworks-report.jar" version="1.01" order="300"  />
   </modules>
 </app>

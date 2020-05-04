@@ -16,7 +16,7 @@
   waterworks.app.context=enterprise
   </env>
   <modules>
-    <module file="modules/etracs/rameses-gov-etracs-entity.jar" version="2.5" order="200"  />
+    <module file="modules/etracs/rameses-gov-etracs-tools.jar" version="2.5" order="200"  />
     <module file="modules/core/osiris2-client-themes.jar" version="2.5" order="200"  />
     <module file="modules/core/osiris2-draw.jar" version="2.5" order="200"  />
     <module file="modules/core/osiris2-framework.jar" version="2.5" order="200"  />
@@ -37,15 +37,12 @@
     <module file="modules/shared/rameses-workflow-mgmt.jar" version="2.5" order="200"  />
     <module file="modules/shared/rameses-enterprise.jar" version="2.5" order="200"  />
     <module file="modules/shared/rameses-enterprise-admin.jar" version="2.5" order="200"  />
-    <module file="modules/shared/rameses-enterprise-entity.jar" version="2.5" order="200"  />
-    <module file="modules/shared/rameses-enterprise-entity-tool.jar" version="2.5" order="200"  />
     <module file="modules/shared/rameses-enterprise-financial.jar" version="2.5" order="200"  />
     <module file="modules/shared/rameses-client-notification2.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-etracs-main.jar" version="2.5" order="200"  />
-    <module file="modules/core/osiris2-client-ui.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-gov-etracs-ngas-report.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-gov-etracs-sre-report.jar" version="2.5" order="200"  />
-    <module file="modules/etracs/rameses-gov-etracs-tools.jar" version="2.5" order="200"  />
+    <module file="modules/core/osiris2-client-ui.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-gov-lgu.jar" version="2.5" order="200"  />
     <module file="modules/etracs/rameses-gov-etracs-signatory-template.jar" version="2.5" order="200"  />
     <module file="modules/treasury/rameses-treasury-common.jar" version="2.51" order="200"  />
@@ -67,6 +64,9 @@
     <module file="modules/rptis/rameses-gov-etracs-rptis-city.jar" version="2.5" order="200"  />
     <module file="modules/queue/rameses-queueing.jar" version="2.5" order="200"  />
     <module file="modules/ctc/rameses-gov-etracs-ctc.jar" version="2.5" order="200"  />
-    <module file="modules/waterworks/rameses-gov-etracs-waterworks-collection.jar" version="1" order="300"  />
+    <module file="modules/entity/rameses-enterprise-entity.jar" version="2.5" order="200"  />
+    <module file="modules/entity/rameses-enterprise-entity-tool.jar" version="2.5" order="200"  />
+    <module file="modules/entity/rameses-gov-etracs-entity.jar" version="2.5" order="200"  />
+    <module file="modules/waterworks/rameses-gov-etracs-waterworks-collection.jar" version="1.1" order="300"  />
   </modules>
 </app>

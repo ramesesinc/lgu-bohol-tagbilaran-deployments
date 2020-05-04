@@ -24,4 +24,5 @@ services:
       - ./resources:/apps/server/public/resources
       #attached plugins
       - ../_custom/client:/apps/server/public/resources/downloads/modules/custom
+      - ../entity/client:/apps/server/public/resources/downloads/modules/entity
       - ../waterworks2/client:/apps/server/public/resources/downloads/modules/waterworks
