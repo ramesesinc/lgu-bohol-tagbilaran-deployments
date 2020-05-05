@@ -401,12 +401,9 @@ class WaterworksBillService {
 		//calculate also the total amt of sales and charges for this bill
 		v.balanceforward = bill.balanceforward;
 
-		billItemEm.debug = true;
-		v.billamount = billItemEm.find([billid: bill.objid]).select("c:{SUM(amount)}").where(" item.itemtype IS NULL OR  item.itemtype NOT IN ('SURCHARGE') ").val();
+		v.billamount = billItemEm.find([billid: bill.objid]).select("c:{SUM(amount)}").where(" (item.itemtype IS NULL OR  item.itemtype NOT IN ('SURCHARGE')) ").val();
 		if( v.billamount == null ) v.billamount = 0;
-		println "bill amount is " + v.billamount;
 
-		billItemEm.debug = false;
 		v.totalsurcharge = billItemEm.find([billid: bill.objid]).select("c:{SUM(amount)}").where(" item.itemtype IN ('SURCHARGE') " ).val();
 		if( v.totalsurcharge == null ) v.totalsurcharge = 0;
 
