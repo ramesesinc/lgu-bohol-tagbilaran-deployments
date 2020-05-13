@@ -42,4 +42,5 @@ VALUES
 ('waterworks_batch_print_size', '20', 'integer'),
 ('waterworks_batch_process_size', '20', 'integer');
 
+UPDATE waterworks_account SET excludeinbatch = 0;
 
