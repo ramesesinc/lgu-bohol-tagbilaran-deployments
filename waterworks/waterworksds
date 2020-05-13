@@ -1,5 +1,0 @@
-dialect=mysql
-driverClass=com.mysql.jdbc.Driver
-url=jdbc:mysql://${waterdb_host}/${waterdb_name}
-user=${waterdb_user}
-pwd=${waterdb_pass}
