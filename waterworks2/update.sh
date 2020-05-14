@@ -1,0 +1,1 @@
+docker rmi -f ramesesinc/local-waterworks-server:255.01.004.002
