@@ -27,7 +27,7 @@ app:
     - { file: "modules/core/rameses-common2.jar", version: 2.50 , order: 200 }
     - { file: "modules/core/rameses-custom-impl.jar", version: 2.50 , order: 200 }
     - { file: "modules/core/rameses-jdbc16.jar", version: 2.50 , order: 200 }
-    - { file: "modules/core/rameses-seti.jar", version: 2.60 , order: 200 }
+    - { file: "modules/core/rameses-seti.jar", version: 2.61 , order: 200 }
     # shared
     - { file: "modules/shared/client-system.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/client-ui-extended.jar", version: 2.50, order: 200 }
@@ -38,7 +38,7 @@ app:
     - { file: "modules/shared/rameses-enterprise.jar", version: 2.51, order: 200 }
     - { file: "modules/shared/rameses-enterprise-admin.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/rameses-enterprise-financial.jar", version: 2.50, order: 200 }
-    - { file: "modules/treasury/rameses-treasury-common.jar", version: 2.51, order: 200 }
+    - { file: "modules/treasury/rameses-treasury-common.jar", version: 2.52, order: 200 }
     # etracs
     - { file: "modules/etracs/rameses-etracs-main.jar", version: 2.50, order: 200 }
     - { file: "modules/etracs/rameses-gov-etracs-tools.jar", version: 2.50, order: 200 } 
