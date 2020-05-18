@@ -5,7 +5,7 @@ app:
     "waterworks.app.context" : "enterprise"
 
   modules:
-    - { file: "modules/waterworks/rameses-gov-etracs-waterworks2.jar" , version: 1.10, order: 300 }
+    - { file: "modules/waterworks/rameses-gov-etracs-waterworks2.jar" , version: 1.11, order: 300 }
     - { file: "modules/waterworks/rameses-gov-etracs-waterworks2-report.jar" , version: 1.04, order: 300 }
     - { file: "modules/waterworks/tagbilaran-waterworks-reports.jar" , version: 2.2, order: 0 }
 
