@@ -1,5 +1,0 @@
-dialect=mysql
-driverClass=com.mysql.jdbc.Driver
-url=jdbc:mysql://${waterworks_db_server}/tagbilaran_waterworks3
-user=root
-pwd=1234
