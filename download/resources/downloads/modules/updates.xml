@@ -59,14 +59,16 @@ waterworks.app.context=enterprise
 	<module file="shared/rameses-workflow-mgmt.jar" version="2.50"/>
 	<module file="shared/rameses-enterprise.jar" version="2.50"/>
 	<module file="shared/rameses-enterprise-admin.jar" version="2.50"/>
-	<module file="shared/rameses-enterprise-entity.jar" version="2.51"/>
-	<module file="shared/rameses-enterprise-entity-tool.jar" version="2.50"/>
 	<module file="shared/rameses-enterprise-financial.jar" version="2.50"/>
 	<module file="shared/rameses-client-notification2.jar" version="2.50"/>	
  
+	<!-- entity -->
+	<module file="entity/rameses-enterprise-entity.jar" version="2.52"/>
+	<module file="entity/rameses-enterprise-entity-tool.jar" version="2.52"/>
+	<module file="entity/rameses-gov-etracs-entity.jar" version="2.52"/>
+
 	<!-- etracs -->
 	<module file="etracs/rameses-etracs-main.jar" version="2.50"/>
-	<module file="etracs/rameses-gov-etracs-entity.jar" version="2.51"/>
 	<module file="etracs/rameses-gov-etracs-ngas-report.jar" version="2.50"/>
 	<module file="etracs/rameses-gov-etracs-sre-report.jar" version="2.50"/>
 	<module file="etracs/rameses-gov-etracs-tools.jar" version="2.50"/>	

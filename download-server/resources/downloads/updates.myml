@@ -34,13 +34,10 @@ app:
     - { file: "modules/shared/rameses-workflow-mgmt.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/rameses-enterprise.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/rameses-enterprise-admin.jar", version: 2.50, order: 200 }
-    - { file: "modules/shared/rameses-enterprise-entity.jar", version: 2.50, order: 200 }
-    - { file: "modules/shared/rameses-enterprise-entity-tool.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/rameses-enterprise-financial.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/rameses-client-notification2.jar", version: 2.50, order: 200 } 
     # etracs
     - { file: "modules/etracs/rameses-etracs-main.jar", version: 2.50, order: 200 }
-    - { file: "modules/etracs/rameses-gov-etracs-entity.jar", version: 2.50, order: 200 }
     - { file: "modules/etracs/rameses-gov-etracs-ngas-report.jar", version: 2.50, order: 200 }
     - { file: "modules/etracs/rameses-gov-etracs-sre-report.jar", version: 2.50, order: 200 }
     - { file: "modules/etracs/rameses-gov-etracs-tools.jar", version: 2.50, order: 200 } 
