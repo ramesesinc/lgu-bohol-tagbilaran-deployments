@@ -17,7 +17,7 @@ services:
       - ../_res/env.conf
       - ../_custom/env.conf
     ports:
-      - "8000:8000"
+      - "8001:8000"
     volumes:
       #jessie's defaults
       - ./resources:/apps/server/public/resources

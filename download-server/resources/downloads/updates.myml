@@ -35,6 +35,7 @@ app:
     - { file: "modules/shared/rameses-enterprise.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/rameses-enterprise-admin.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/rameses-enterprise-entity.jar", version: 2.50, order: 200 }
+    - { file: "modules/shared/rameses-enterprise-entity-tool.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/rameses-enterprise-financial.jar", version: 2.50, order: 200 }
     - { file: "modules/shared/rameses-client-notification2.jar", version: 2.50, order: 200 } 
     # etracs
