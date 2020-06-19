@@ -1,0 +1,2175 @@
+***************************************************************
+START OSIRIS 3 TRANSACTION SERVER @ port:8070Wed Jun 03 00:00:06 GMT 2020
+***************************************************************
+starting servers
+starting server context root @ file:////apps/server/services
+Loading apps
+enterprise
+Server: osiris3 has started
+*Datasource connection pool provider: tomcat.cp.TomcatCpDsProvider@7c182454
+#######################################
+# TomcatCPDataSource datasource config:
+#######################################
+ driverClassName=com.mysql.jdbc.Driver
+ poolName=Tomcat Connection Pool[1-885208928]
+ defaultCatalog=null
+ initSQL=null
+ abandonWhenPercentageFull=50
+ defaultTransactionIsolation=-1
+ initialSize=5
+ maxActive=100
+ minIdle=5
+ maxIdle=100
+ maxWait=30000
+ maxAge=-1
+ minEvictableIdleTimeMillis=60000
+ removeAbandonedTimeout=60
+ suspectTimeout=0
+ testOnBorrow=true
+ testOnConnect=false
+ testOnReturn=false
+ testWhileIdle=false
+ timeBetweenEvictionRunsMillis=30000
+ useDisposableConnectionFacade=true
+ useLock=false
+ useEquals=true
+ validationQuery=SELECT 1
+ validationInterval=30000
+ 
+LOADING RULES V2: Started
+loading rule waterworksapplication
+loading rule waterworksbilling
+loading rule waterworksbillingschedule
+loading rule waterworkscomputation
+loading rule waterworkspayment
+LOADING RULES V2: Finished
+***************************************************************
+START OSIRIS 3 TRANSACTION SERVER @ port:8070Wed Jun 03 00:07:48 GMT 2020
+***************************************************************
+starting servers
+starting server context root @ file:////apps/server/services
+Loading apps
+enterprise
+Server: osiris3 has started
+*Datasource connection pool provider: tomcat.cp.TomcatCpDsProvider@7467f451
+#######################################
+# TomcatCPDataSource datasource config:
+#######################################
+ driverClassName=com.mysql.jdbc.Driver
+ poolName=Tomcat Connection Pool[1-221508235]
+ defaultCatalog=null
+ initSQL=null
+ abandonWhenPercentageFull=50
+ defaultTransactionIsolation=-1
+ initialSize=5
+ maxActive=100
+ minIdle=5
+ maxIdle=100
+ maxWait=30000
+ maxAge=-1
+ minEvictableIdleTimeMillis=60000
+ removeAbandonedTimeout=60
+ suspectTimeout=0
+ testOnBorrow=true
+ testOnConnect=false
+ testOnReturn=false
+ testWhileIdle=false
+ timeBetweenEvictionRunsMillis=30000
+ useDisposableConnectionFacade=true
+ useLock=false
+ useEquals=true
+ validationQuery=SELECT 1
+ validationInterval=30000
+ 
+LOADING RULES V2: Started
+loading rule waterworksapplication
+loading rule waterworksbilling
+loading rule waterworksbillingschedule
+loading rule waterworkscomputation
+loading rule waterworkspayment
+LOADING RULES V2: Finished
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-7f50 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-50 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-50-' for key 'uix_serialno'
+Interceptor error interceptors/WaterworksAccountPersistenceInterceptor.beforeCreate
+error class java.lang.Exception address_barangay_objid is required 
+address_barangay_name is required 
+
+error class java.lang.Exception scheduleid is required
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-5f97 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=000111852 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '000111852-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-540d java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=980503215 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '980503215-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-53da java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=000111852 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '000111852-' for key 'uix_serialno'
+error class java.lang.Exception There must be at least one consumption entry
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-3d7f java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=010112750 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '010112750-' for key 'uix_serialno'
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-3335 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-50 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-50-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-3335 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-52 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-52-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-3335 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-53 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-53-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-3335 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-54 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-54-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-32c9 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-53 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-53-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-3296 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-39 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-39-' for key 'uix_serialno'
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-29a9 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=131101293 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '131101293-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-25e5 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=2013071540 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '2013071540-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54219245:1727785465e:-25e5 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=2013071540 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '2013071540-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7fa5 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7fa5 java.lang.String
+2 acctno=240010352 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=298 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '240010352-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7fa4 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7fa4 java.lang.String
+2 acctno=240010352 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=298 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '240010352-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7f8b java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7f8b java.lang.String
+2 acctno=240010347 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=294 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '240010347-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM-4e26d44f:17277936f80:-2676 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=150502422 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '150502422-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_consumption` (`objid`,`state`,`txnmode`,`acctid`,`billid`,`reading`,`volume`,`amount`,`year`,`month`,`hold`,`readingdate`,`reader_objid`,`reader_name`,`meterid`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 15
+0 objid=WAC68fd4575:17277926822:-7f53 java.lang.String
+1 state=null NULL
+2 txnmode=CAPTURE java.lang.String
+3 acctid=WACCT-1d32c3b9:17212234c65:-7fcc java.lang.String
+4 billid=null NULL
+5 reading=0 java.lang.Integer
+6 volume=0 java.lang.Integer
+7 amount=0 java.math.BigDecimal
+8 year=2020 java.lang.Integer
+9 month=4 java.lang.Integer
+10 hold=0 java.lang.Integer
+11 readingdate=null NULL
+12 reader_objid=null NULL
+13 reader_name=null NULL
+14 meterid=WM501ff2ce:17215afa71f:-3684 java.lang.String
+error class java.lang.Exception Duplicate entry 'WACCT-1d32c3b9:17212234c65:-7fcc-2020-4' for key 'uix_acctid_year_month'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_consumption` (`objid`,`state`,`txnmode`,`acctid`,`billid`,`reading`,`volume`,`amount`,`year`,`month`,`hold`,`readingdate`,`reader_objid`,`reader_name`,`meterid`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 15
+0 objid=WAC68fd4575:17277926822:-7f52 java.lang.String
+1 state=null NULL
+2 txnmode=CAPTURE java.lang.String
+3 acctid=WACCT-1d32c3b9:17212234c65:-7fcc java.lang.String
+4 billid=null NULL
+5 reading=0 java.lang.Integer
+6 volume=0 java.lang.Integer
+7 amount=0 java.math.BigDecimal
+8 year=2020 java.lang.Integer
+9 month=4 java.lang.Integer
+10 hold=0 java.lang.Integer
+11 readingdate=null NULL
+12 reader_objid=null NULL
+13 reader_name=null NULL
+14 meterid=WM501ff2ce:17215afa71f:-3684 java.lang.String
+error class java.lang.Exception Duplicate entry 'WACCT-1d32c3b9:17212234c65:-7fcc-2020-4' for key 'uix_acctid_year_month'
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_consumption` (`objid`,`state`,`txnmode`,`acctid`,`billid`,`reading`,`volume`,`amount`,`year`,`month`,`hold`,`readingdate`,`reader_objid`,`reader_name`,`meterid`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 15
+0 objid=WAC68fd4575:17277926822:-7f3b java.lang.String
+1 state=null NULL
+2 txnmode=CAPTURE java.lang.String
+3 acctid=WACCT-1d32c3b9:17212234c65:-7fbf java.lang.String
+4 billid=null NULL
+5 reading=0 java.lang.Integer
+6 volume=0 java.lang.Integer
+7 amount=0 java.math.BigDecimal
+8 year=2020 java.lang.Integer
+9 month=4 java.lang.Integer
+10 hold=0 java.lang.Integer
+11 readingdate=null NULL
+12 reader_objid=null NULL
+13 reader_name=null NULL
+14 meterid=WM-19e456d0:17225196794:-7e77 java.lang.String
+error class java.lang.Exception Duplicate entry 'WACCT-1d32c3b9:17212234c65:-7fbf-2020-4' for key 'uix_acctid_year_month'
+Interceptor error interceptors/WaterworksAccountPersistenceInterceptor.beforeCreate
+error class java.lang.Exception address_barangay_objid is required 
+address_barangay_name is required 
+
+SocketIoConnectionPool... starting
+http://192.168.101.62:7080/
+socketio: connected
+error class java.lang.Exception year is required in createBill
+error class java.lang.Exception year is required in createBill
+error class java.lang.Exception year is required in createBill
+error class java.lang.Exception year is required in createBill
+error class java.lang.Exception year is required in createBill
+error class java.lang.Exception year is required in createBill
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202005-120103 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+error class java.lang.NullPointerException Cannot invoke method plus() on null object
+error class java.lang.Exception There is still pending batch bill for this subarea. Please close that first
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception There is still pending batch bill for this subarea. Please close that first
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202005-120103 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202004-100102 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202004-100102 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202004-100102 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202005-120103 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202004-100102 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeProcess
+error class java.lang.Exception Please resolve the batch errors first before proceeding
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeProcess
+error class java.lang.Exception Please resolve the batch errors first before proceeding
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeProcess
+error class java.lang.Exception Please resolve the batch errors first before proceeding
+error class java.lang.Exception year is required in createBill
+error class java.lang.Exception year is required in createBill
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202004-120203 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202004-120203 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+error class java.lang.Exception year is required in createBill
+error class java.lang.Exception year is required in createBill
+error class java.lang.Exception year is required in createBill
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202005-120203 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+ 
+DEBUG : 
+SQL   :  SELECT `task`.`state` AS `task_state`,COUNT(*) AS `icount` FROM `waterworks_application` LEFT  JOIN  `waterworks_application_task`  `task`  ON `waterworks_application`.`taskid`=`task`.`taskid` WHERE  `task`.`state` IN ('verify-requirements','assessment','approval') AND `task`.`assignee_objid` IS NULL AND `task`.`enddate` IS NULL GROUP BY `task`.`state`
+error class java.lang.Exception Table 'tagbilaran_waterworks2.waterworks_application' doesn't exist
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-7310 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-52 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-52-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-7310 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-53 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-53-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-7310 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-54 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-54-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-7310 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-55 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-55-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-7310 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-56 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-56-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-7310 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-58 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-58-' for key 'uix_serialno'
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202004-100102 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202005-120203 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception reading is required in WaterworksComputationService
+Interceptor error interceptors/WaterworksAccountPersistenceInterceptor.beforeCreate
+error class java.lang.Exception address_barangay_objid is required 
+address_barangay_name is required 
+
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7eff java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7eff java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7eff java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_consumption` (`objid`,`state`,`txnmode`,`acctid`,`billid`,`reading`,`volume`,`amount`,`year`,`month`,`hold`,`readingdate`,`reader_objid`,`reader_name`,`meterid`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 15
+0 objid=WAC68fd4575:17277926822:-7d26 java.lang.String
+1 state=null NULL
+2 txnmode=CAPTURE java.lang.String
+3 acctid=WACCT-1d32c3b9:17212234c65:-7f9e java.lang.String
+4 billid=null NULL
+5 reading=768 java.lang.Integer
+6 volume=19 java.lang.Integer
+7 amount=125.0 java.math.BigDecimal
+8 year=2020 java.lang.Integer
+9 month=4 java.lang.Integer
+10 hold=0 java.lang.Integer
+11 readingdate=null NULL
+12 reader_objid=null NULL
+13 reader_name=null NULL
+14 meterid=WM-19e456d0:17225196794:-566a java.lang.String
+error class java.lang.Exception Duplicate entry 'WACCT-1d32c3b9:17212234c65:-7f9e-2020-4' for key 'uix_acctid_year_month'
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7d70 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+error class java.lang.Exception There must be at least one consumption entry
+error class java.lang.Exception Prev reading must be less than meter capacity
+error class java.lang.Exception Prev reading must be less than meter capacity
+error class java.lang.Exception Schema vw_waterworks_disconnection cannot be found from provided resources
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM-3b1d465f:1728059d397:-5420 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=170308548 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '170308548-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM-3b1d465f:1728059d397:-53cc java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=170308548 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '170308548-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-33b2 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-54 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-54-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7ccb java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7ccb java.lang.String
+2 acctno=160000846-B java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=56 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '160000846-B-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7cca java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7cca java.lang.String
+2 acctno=160000846-B java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=56 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '160000846-B-' for key 'uix_acctno'
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7cc5 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7cc5 java.lang.String
+2 acctno=160000846-B java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=56 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '160000846-B-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7cc4 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7cc4 java.lang.String
+2 acctno=160000846-B java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=56 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '160000846-B-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7cbc java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7cbc java.lang.String
+2 acctno=160000845-A java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=57 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '160000845-A-' for key 'uix_acctno'
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-2d02 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-53 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-53-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-2d02 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-53-A java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-53-A-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-7e13 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=180820600 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '180820600-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-7e13 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=180820600 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '180820600-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7c76 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7c76 java.lang.String
+2 acctno=240010427 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=373 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '240010427-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-7dbb java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-A java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-A-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-7d88 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=180820600 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '180820600-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7c73 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7c73 java.lang.String
+2 acctno=120000404 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=182 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '120000404-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7d70 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202005-120203 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7c72 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7c72 java.lang.String
+2 acctno=120000404 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=182 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '120000404-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-7ae6 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=20180404403 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '20180404403-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-7aa4 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=X java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'X-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7c6d java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7c6d java.lang.String
+2 acctno=120000405 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=183 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '120000405-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-7874 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=20180502502 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '20180502502-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-7630 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=180613500 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '180613500-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7d6c java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-73af java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=20180904798 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '20180904798-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-18a9 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-55 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-55-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-18a9 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-55 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-55-' for key 'uix_serialno'
+error class java.lang.Exception Schema vw_waterworks_disconnection cannot be found from provided resources
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-719a java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=180816088 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '180816088-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-6f76 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=20180909544 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '20180909544-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7eff java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-6daa java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=181153102 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '181153102-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-6d5c java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-87 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-87-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-6d5c java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-88 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-88-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7d70 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-6b76 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=154064 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '154064-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-6b76 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-90 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-90-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM4a608097:1727cac1a73:-d0f java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=0028495 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '0028495-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-67d0 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=180609145 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '180609145-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-65ef java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-94 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-94-' for key 'uix_serialno'
+Interceptor error interceptors/WaterworksAccountPersistenceInterceptor.beforeCreate
+error class java.lang.Exception address_barangay_objid is required 
+address_barangay_name is required 
+
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7eb5 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7eb5 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-57f5 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=181270507 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '181270507-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7c36 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7c36 java.lang.String
+2 acctno=120000457 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=200 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '120000457-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-55fd java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-10 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-10-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7ecb java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM54b0fc12:1727d903ac9:-5412 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-1 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-1-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7eb7 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_consumption` WHERE `objid`=?
+param count is 1
+0 objid=WAC68fd4575:17277926822:-7e25 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_bill`, CONSTRAINT `fk_waterworks_bill_consumptionid` FOREIGN KEY (`consumptionid`) REFERENCES `waterworks_consumption` (`objid`))
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception Prev reading must be less than meter capacity
+error class java.lang.Exception Prev reading must be less than meter capacity
+error class java.lang.Exception Prev reading must be less than meter capacity
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM-3b1d465f:1728059d397:b5b java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-02 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=100000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-02-' for key 'uix_serialno'
+error class java.lang.Exception Prev reading must be less than meter capacity
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM-3b1d465f:1728059d397:1f7b java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=021002075 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=100000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '021002075-' for key 'uix_serialno'
+error class java.lang.Exception reading is required in WaterworksComputationService
+error class java.lang.Exception reading is required in WaterworksComputationService
+ 
+DEBUG:
+SQL:  DELETE FROM `vw_waterworks_account` WHERE `objid`=?
+param count is 1
+0 objid=WACCT68fd4575:17277926822:-7c1e java.lang.String
+error class java.lang.Exception Can not delete from join view 'tagbilaran_waterworks2.vw_waterworks_account'
+error class java.lang.Exception There is still pending batch bill for this subarea. Please close that first
+error class java.lang.Exception There is still pending batch bill for this subarea. Please close that first
+error class java.lang.Exception There is still pending batch bill for this subarea. Please close that first
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_batch_billing` WHERE `objid`=?
+param count is 1
+0 objid=WB202005-120103 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_batch_billing_error`, CONSTRAINT `fk_waterworks_batch_blling_error_batchid` FOREIGN KEY (`batchid`) REFERENCES `waterworks_batch_billing` (`objid`))
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.checkErrorsBeforeApproval
+error class java.lang.Exception All accounts with active meters that are not on hold must have a volume consumption
+Interceptor error interceptors/WaterworksBatchBillingTaskInterceptor.validateBeforeClose
+error class java.lang.Exception This batch cannot be closed yet because there are unprinted bills
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-7d5e java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=60103267 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '60103267-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-7d5e java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=60103267 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '60103267-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-7d5e java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-2 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-2-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-7d09 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-2 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-2-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-7d09 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-02 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-02-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-76f3 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-76f3 java.lang.String
+2 acctno=150000002 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=2 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '150000002-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-7ad6 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=140107595 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '140107595-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-791d java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=01786990 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '01786990-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-7776 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=0601849 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '0601849-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-75c7 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=94097293 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '94097293-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-7420 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=6519 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '6519-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-7276 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=031105294 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '031105294-' for key 'uix_serialno'
+error class java.lang.Exception Schema vw_waterworks_reconnection cannot be found from provided resources
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-70cc java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=161001179 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '161001179-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-70cc java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-009 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-009-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-6f12 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=0402799 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '0402799-' for key 'uix_serialno'
+error class java.lang.Exception Schema vw_waterworks_disconnection cannot be found from provided resources
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-6d69 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=0931234 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '0931234-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-6d69 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-011 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-011-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-6baf java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=08240416 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '08240416-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-6a08 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=0812124 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '0812124-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-6861 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=0800620 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '0800620-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-66b6 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=980124128 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '980124128-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-650f java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=9186327 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '9186327-' for key 'uix_serialno'
+error class java.lang.Exception capacity is required 
+
+error class java.lang.Exception capacity is required 
+
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-6368 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=20080930525 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '20080930525-' for key 'uix_serialno'
+error class java.lang.Exception Schema vw_waterworks_disconnection cannot be found from provided resources
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-61bc java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=020742374 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '020742374-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-6015 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=20728254 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '20728254-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-5e6e java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=9009480 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '9009480-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-5e6e java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-020 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-020-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-5cb4 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=201237563 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '201237563-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-5b0d java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=50608063 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '50608063-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-5966 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=20110711517 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '20110711517-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-57bf java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=0405437 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '0405437-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-5610 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=140109766 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '140109766-' for key 'uix_serialno'
+Interceptor error interceptors/WaterworksAccountPersistenceInterceptor.beforeCreate
+error class java.lang.Exception address_barangay_objid is required 
+address_barangay_name is required 
+
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-5469 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=160544615 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '160544615-' for key 'uix_serialno'
+error class java.lang.Exception There is still pending batch bill for this subarea. Please close that first
+error class java.lang.Exception There is still pending batch bill for this subarea. Please close that first
+error class java.lang.Exception There is still pending batch bill for this subarea. Please close that first
+error class java.lang.Exception There is still pending batch bill for this subarea. Please close that first
+RELOADING RULESET waterworksbillingschedule
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_billing_period` WHERE `objid`=?
+param count is 1
+0 objid=S08-2020-06 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_subarea`, CONSTRAINT `fk_waterworks_subarea_nextperiodid` FOREIGN KEY (`periodid`) REFERENCES `waterworks_billing_period` (`objid`))
+error class java.lang.Exception Bill or account not found
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_billing_period` WHERE `objid`=?
+param count is 1
+0 objid=S15-2020-04 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_subarea`, CONSTRAINT `fk_waterworks_subarea_nextperiodid` FOREIGN KEY (`periodid`) REFERENCES `waterworks_billing_period` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_billing_period` WHERE `objid`=?
+param count is 1
+0 objid=S15-2020-04 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_subarea`, CONSTRAINT `fk_waterworks_subarea_nextperiodid` FOREIGN KEY (`periodid`) REFERENCES `waterworks_billing_period` (`objid`))
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-52bc java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=1100633 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '1100633-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-50ef java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=10115670 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '10115670-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-50ef java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=10115670 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '10115670-' for key 'uix_serialno'
+error class java.lang.Exception Schema vw_waterworks_disconnection cannot be found from provided resources
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-4a7a java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=9511110 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '9511110-' for key 'uix_serialno'
+error class java.lang.Exception Schema vw_waterworks_disconnection cannot be found from provided resources
+Interceptor error interceptors/WaterworksAccountPersistenceInterceptor.beforeCreate
+error class java.lang.Exception address_barangay_objid is required 
+address_barangay_name is required 
+
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7682 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7682 java.lang.String
+2 acctno=150500133 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=308 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '150500133-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7658 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7658 java.lang.String
+2 acctno=150500133 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=308 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '150500133-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_billing_period` WHERE `objid`=?
+param count is 1
+0 objid=S15-2020-04 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_subarea`, CONSTRAINT `fk_waterworks_subarea_nextperiodid` FOREIGN KEY (`periodid`) REFERENCES `waterworks_billing_period` (`objid`))
+ 
+DEBUG:
+SQL:  DELETE FROM `waterworks_billing_period` WHERE `objid`=?
+param count is 1
+0 objid=S15-2020-04 java.lang.String
+error class java.lang.Exception Cannot delete or update a parent row: a foreign key constraint fails (`tagbilaran_waterworks2`.`waterworks_subarea`, CONSTRAINT `fk_waterworks_subarea_nextperiodid` FOREIGN KEY (`periodid`) REFERENCES `waterworks_billing_period` (`objid`))
+RELOADING RULESET waterworksbillingschedule
+Interceptor error interceptors/WaterworksAccountPersistenceInterceptor.beforeCreate
+error class java.lang.Exception address_barangay_objid is required 
+address_barangay_name is required 
+
+error class java.lang.Exception Schema vw_waterworks_disconnection cannot be found from provided resources
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-33f2 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=00301508 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '00301508-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM-68a15721:1728353742e:-63bb java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=7621876 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '7621876-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM-68a15721:1728353742e:-60dd java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=7621876 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '7621876-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-7638 java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-7638 java.lang.String
+2 acctno=150500256 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=355 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '150500256-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM-68a15721:1728353742e:-5e04 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=100090410 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '100090410-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL:  DELETE FROM `vw_waterworks_account` WHERE `objid`=?
+param count is 1
+0 objid=WACCT68fd4575:17277926822:-762d java.lang.String
+error class java.lang.Exception Can not delete from join view 'tagbilaran_waterworks2.vw_waterworks_account'
+ 
+DEBUG:
+SQL:  DELETE FROM `vw_waterworks_account` WHERE `objid`=?
+param count is 1
+0 objid=WACCT68fd4575:17277926822:-762d java.lang.String
+error class java.lang.Exception Can not delete from join view 'tagbilaran_waterworks2.vw_waterworks_account'
+error class java.lang.Exception Schema vw_waterworks_disconnection cannot be found from provided resources
+Interceptor error interceptors/WaterworksAccountPersistenceInterceptor.beforeCreate
+error class java.lang.Exception address_barangay_objid is required 
+address_barangay_name is required 
+
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_account` (`objid`,`acctinfoid`,`acctno`,`state`,`dtstarted`,`seqno`,`remarks`,`applicationid`,`billid`,`lng`,`lat`,`excludeinbatch`,`email`,`mobileno`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+param count is 14
+0 objid=WACCT68fd4575:17277926822:-761e java.lang.String
+1 acctinfoid=WACCT68fd4575:17277926822:-761e java.lang.String
+2 acctno=150500175 java.lang.String
+3 state=DRAFT java.lang.String
+4 dtstarted=null NULL
+5 seqno=332 java.lang.Integer
+6 remarks=null NULL
+7 applicationid=null NULL
+8 billid=null NULL
+9 lng=null NULL
+10 lat=null NULL
+11 excludeinbatch=0 java.lang.Integer
+12 email=null NULL
+13 mobileno=null NULL
+error class java.lang.Exception Duplicate entry '150500175-' for key 'uix_acctno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM2b316c3a:17282e3808a:-1f41 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=0518416 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry '0518416-' for key 'uix_serialno'
+ 
+DEBUG:
+SQL: INSERT INTO `waterworks_meter` (`objid`,`state`,`serialno`,`brand`,`capacity`,`reading`,`currentacctid`,`stocktype`,`sizeid`) VALUES (?,?,?,?,?,?,?,?,?)
+param count is 9
+0 objid=WM-1750f8cc:172914ae04e:-7ef6 java.lang.String
+1 state=ACTIVE java.lang.String
+2 serialno=XX-02 java.lang.String
+3 brand=EVER java.lang.String
+4 capacity=10000 java.lang.Integer
+5 reading=null NULL
+6 currentacctid=null NULL
+7 stocktype=NONSTOCK java.lang.String
+8 sizeid=ONE_HALF java.lang.String
+error class java.lang.Exception Duplicate entry 'XX-02-' for key 'uix_serialno'

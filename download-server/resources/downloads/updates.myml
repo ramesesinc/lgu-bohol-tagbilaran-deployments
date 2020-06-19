@@ -47,9 +47,9 @@ app:
     # treasury
     - { file: "modules/treasury/rameses-treasury-common.jar", version: 2.52, order: 200 }
     - { file: "modules/treasury/rameses-gov-depositslip.jar", version: 2.50, order: 200 }
-    - { file: "modules/treasury/rameses-gov-treasury.jar", version: 2.52, order: 200 }
-    - { file: "modules/treasury/rameses-gov-treasury-report.jar", version: 2.51, order: 200 }
-    - { file: "modules/treasury/rameses-gov-treasury-tool.jar", version: 2.51, order: 200 }
+    - { file: "modules/treasury/rameses-gov-treasury.jar", version: 2.53, order: 200 }
+    - { file: "modules/treasury/rameses-gov-treasury-report.jar", version: 2.52, order: 200 }
+    - { file: "modules/treasury/rameses-gov-treasury-tool.jar", version: 2.52, order: 200 }
     # epayment
     - { file: "modules/epayment/rameses-gov-epayment.jar", version: 2.50, order: 200 }
     - { file: "modules/epayment/rameses-gov-epayment-report.jar", version: 2.50, order: 200 }

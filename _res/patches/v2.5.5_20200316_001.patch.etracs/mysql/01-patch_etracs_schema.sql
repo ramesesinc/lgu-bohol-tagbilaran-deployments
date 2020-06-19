@@ -1,3 +1,6 @@
+alter table account_incometarget modify itemid varchar(50) character set utf8 not null
+;
+
 alter table account_incometarget add CONSTRAINT `fk_account_incometarget_itemid` 
 	FOREIGN KEY (`itemid`) REFERENCES `account` (`objid`)
 ;
@@ -61,6 +64,34 @@ CREATE TABLE `cashreceipt_plugin` (
    CONSTRAINT `pk_cashreceipt_plugin` PRIMARY KEY (`objid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ; 
+
+
+DROP TABLE IF EXISTS ztmp_voidreceipt
+;
+CREATE TABLE ztmp_voidreceipt 
+SELECT t1.*, ( 
+      SELECT objid FROM cashreceipt_void 
+      WHERE receiptid = t1.receiptid 
+      ORDER BY txndate LIMIT 1 
+   ) AS objid 
+FROM ( 
+   SELECT receiptid, COUNT(*) AS txncount  
+   FROM cashreceipt_void 
+   GROUP BY receiptid 
+   HAVING COUNT(*) > 1 
+)t1 
+;
+CREATE TABLE ztmp_voidreceipt_for_removal 
+SELECT v.*  
+FROM ztmp_voidreceipt z, cashreceipt_void v 
+WHERE z.`receiptid` = v.receiptid 
+   AND z.objid <> v.objid 
+;
+DELETE FROM cashreceipt_void WHERE objid IN ( 
+   SELECT objid FROM ztmp_voidreceipt_for_removal
+);
+DROP TABLE ztmp_voidreceipt_for_removal
+;
 
 create unique index uix_receiptid on cashreceipt_void (receiptid)
 ; 
@@ -162,6 +193,11 @@ CREATE TABLE `sync_data_pending` (
 ; 
 
 
-CREATE UNIQUE INDEX `uix_ruleset_name` ON sys_rule (`ruleset`,`name`)
+
+ALTER TABLE sys_rule ADD _ukey VARCHAR(50) NOT NULL DEFAULT ''
+;
+UPDATE sys_rule SET _ukey=objid WHERE _ukey=''
+;
+CREATE UNIQUE INDEX `uix_ruleset_name` ON sys_rule (`ruleset`,`name`,_ukey)
 ;
 
