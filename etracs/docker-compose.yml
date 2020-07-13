@@ -48,8 +48,6 @@ services:
       - ../_res/connections:/apps/etracs25/connections/ext
       - ./modules:/apps/etracs25/modules
 
-      - ./dev_modules/rameses-treasury-common-services.jar:/services/modules/rameses-treasury-common-services.jar
-
       - ./dev_modules/gov:/gov
       - ./dev_modules/gov/etracs__gov.conf:/apps/etracs25/modules.conf.d/etracs__gov.conf
 

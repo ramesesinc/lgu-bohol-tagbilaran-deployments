@@ -21,7 +21,7 @@ entity.app.context=etracs25
 vehicle.app.host=192.168.101.62:8072
 vehicle.app.context=enterprise
 
-waterworks.app.host=192.168.101.63:8076
+waterworks.app.host=192.168.101.62:8076
 waterworks.app.context=enterprise
 
 </env>
@@ -77,7 +77,7 @@ waterworks.app.context=enterprise
 	<module file="etracs/rameses-gov-lgu-treasury.jar" version="2.50"/>
 
 	<!-- treasury -->
-	<module file="treasury/rameses-treasury-common.jar" version="2.51"/>
+	<module file="treasury/rameses-treasury-common.jar" version="2.52"/>
 	<module file="treasury/rameses-gov-depositslip.jar" version="2.50"/>
 	<module file="treasury/rameses-gov-treasury.jar" version="2.51"/>
 	<module file="treasury/rameses-gov-treasury-report.jar" version="2.51"/>
@@ -111,7 +111,6 @@ waterworks.app.context=enterprise
 	<module file="vehicle/rameses-gov-etracs-vehicle.jar" version="1.05"/>
 
 	<!-- waterworks -->
-	<module file="waterworks/rameses-gov-etracs-waterworks.jar" version="1.00"/>
-	<module file="waterworks/rameses-gov-etracs-waterworks-report.jar" version="1.01"/>
+	<module file="waterworks/rameses-gov-etracs-waterworks-collection.jar" version="1.00"/>
 </modules>
 </app>
