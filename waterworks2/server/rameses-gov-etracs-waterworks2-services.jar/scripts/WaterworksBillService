@@ -275,6 +275,13 @@ class WaterworksBillService {
 	}
 
 	@ProxyMethod
+	public def clearSurcharges( def o ) {
+		if(!o.objid ) throw new Exception("objid of bill is required in WaterworksBillService.clearPenalties");
+		billItemEm.find([billid: o.objid]).where(" item.itemtype IN ('SURCHARGE') AND amtpaid = 0" ).delete();
+		updateBillTotals( o );
+	}
+
+	@ProxyMethod
 	public def updateBillTotals( def o ) {
 		if(!o.bill && !o.objid ) throw new Exception("objid or bill is required in WaterworksBillService.updateBillTotals");
 

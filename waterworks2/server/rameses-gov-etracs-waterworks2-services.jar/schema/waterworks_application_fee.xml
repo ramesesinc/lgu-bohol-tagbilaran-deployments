@@ -1,6 +1,6 @@
 <schema>
 
-	<element tablename="waterworks_newconnection_fee">
+	<element tablename="waterworks_application_fee">
 		<field name="objid" primary="true"  prefix="WAF"/>
 		<field name="appid" required="true"/> 
 		<complex name="item" ref="waterworks_itemaccount" jointype="many-to-one" required="true">

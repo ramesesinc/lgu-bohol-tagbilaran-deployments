@@ -1,6 +1,6 @@
 <schema>
 
-	<element tablename="waterworks_newconnection_bom">
+	<element tablename="waterworks_application_bom">
 		<field name="objid" primary="true"  prefix="WNCB"/>
 		<field name="appid" required="true"/> 
 		<field name="item_objid" required="true"/>

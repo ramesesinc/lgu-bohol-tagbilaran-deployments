@@ -2,12 +2,17 @@ import com.rameses.annotations.*;
 
 class WaterworksPaymentService {
 
-
 	@Service("DateService")
 	def dateSvc;
 
 	@Service("WaterworksBillingRuleService")
 	def ruleSvc;
+
+	@Service("WaterworksBillService")
+	def billSvc;
+
+	@Service("WorkflowTaskService")
+	def taskSvc;
 
 	@DataContext("waterworks_payment")
 	def paymentEm;
@@ -21,15 +26,15 @@ class WaterworksPaymentService {
 	@DataContext("waterworks_credit")
 	def creditEm;
 
-
 	@DataContext("vw_waterworks_account")
 	def vwAcctEm;
 
 	@DataContext("vw_waterworks_bill")
 	def vwBillEm;
 
-	@Service("WaterworksBillService")
-	def billSvc;
+	@DataContext("waterworks_application_fee")
+	def appFeeEm;
+	
 
 	def savePayment( pmt ) {
 		//refno,refdate,refid,reftype,pmttxntype,amount
@@ -115,9 +120,39 @@ class WaterworksPaymentService {
 		savePayment( pmt );
 	}	
 
+	//pay the new payment.
+	private void payApplication( def rct ) {
+		def pmt = [:];
+		pmt.refno = rct.receiptno;
+		pmt.reftype = "cashreceipt"
+		pmt.refid = rct.objid;
+		pmt.refdate = rct.receiptdate;
+		pmt.discount = 0;
+		pmt.amount = rct.amount;
+		pmt.voided = 0;
+		pmt.txnmode = rct.txnmode;
+		pmt.remarks = rct.remarks;
+		pmt.acctid = rct.acctid;
+		pmt.appid = rct.appid;
+		pmt.pmttxntype = rct.pmttxntype;
+		pmt.txndate = dateSvc.getServerDate();
+		pmt = paymentEm.create( pmt );
+		appFeeEm.find( [appid: rct.appid ] ).update( [amtpaid: "{amount}"] );
+		//update also workflow to move it from payment
+		def wf = [:];
+		wf.processname = 'waterworks_application';
+		wf.refid = rct.appid;
+		wf.startdate = dateSvc.serverDate;
+		wf.action = "post-payment";
+		taskSvc.signal( wf );		
+	}
+
 	@ProxyMethod 
 	public def postPayment( def param ) {
-		if( param.billid ) {
+		if( param.pmttxntype == "application" ) {
+			payApplication(param);
+		}
+		else if( param.billid ) {
 			if( param.reftype == "credit" ) postCredit( param );
 			else if( param.reftype == "cashreceipt" ) postCashReceipt( param );
 			billSvc.updateBillTotals( [objid: param.billid] );
@@ -139,22 +174,35 @@ class WaterworksPaymentService {
 		if(!pmt) pmt = paymentEm.find( [refid: refid  ]).first();
 		if(!pmt) throw new Exception("Payment does not exist");
 
-		def pmtItems = paymentItemEm.find( [parentid: pmt.objid ]).list();
-		pmtItems?.each {
-			if(it.reftype == "waterworks_billitem") {
-				billItemEm.find( [objid: it.refid ] ).update( [amtpaid: "{amtpaid - :amt}", discount: 0 ], [amt: it.amount] );
-			}
+		if( pmt.pmttxntype == "application" ) {
+			paymentEm.find( [objid: pmt.objid] ).update( [voided: 1 ] );
+			appFeeEm.find( [appid: pmt.appid ] ).update( [amtpaid: 0] );
+			def wf = [:];
+			wf.processname = 'waterworks_application';
+			wf.refid = pmt.appid;
+			wf.startdate = dateSvc.serverDate;
+			wf.action = "void-payment";
+			taskSvc.signal( wf );	
 		}
-		//automatically delete all related credits
-		creditEm.find( [paymentrefid: pmt.objid ] ).delete();
-		paymentEm.find( [objid: pmt.objid] ).update( [voided: 1 ] );
+		else {
+			//STANDARD BILLING
+			def pmtItems = paymentItemEm.find( [parentid: pmt.objid ]).list();
+			pmtItems?.each {
+				if(it.reftype == "waterworks_billitem") {
+					billItemEm.find( [objid: it.refid ] ).update( [amtpaid: "{amtpaid - :amt}", discount: 0 ], [amt: it.amount] );
+				}
+			};
+			//automatically delete all related credits
+			creditEm.find( [paymentrefid: pmt.objid ] ).delete();
+			paymentEm.find( [objid: pmt.objid] ).update( [voided: 1 ] );
 
-		//delete payment items so it will not affect the billitems link
-		paymentItemEm.find( [parentid: pmt.objid] ).delete();		
+			//delete payment items so it will not affect the billitems link
+			paymentItemEm.find( [parentid: pmt.objid] ).delete();		
 
-		//if there is a bill post totals
-		if( pmt.billid ) {
-			billSvc.updateBillTotals( [objid: pmt.billid] );
+			//if there is a bill post totals
+			if( pmt.billid ) {
+				billSvc.updateBillTotals( [objid: pmt.billid] );
+			}		
 		}
 	}
 

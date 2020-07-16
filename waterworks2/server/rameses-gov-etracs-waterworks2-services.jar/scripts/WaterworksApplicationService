@@ -5,7 +5,7 @@ import com.rameses.util.*;
 import treasury.utils.*;
 import treasury.facts.*;
 
-class WaterworksNewConnectionService {
+class WaterworksApplicationService {
 	
 	@Service("BillingRuleService")
 	def ruleSvc;
@@ -13,21 +13,21 @@ class WaterworksNewConnectionService {
 	@Service("DateService")
 	def dateSvc;
 
-	@DataContext("waterworks_newconnection")
-	def newConnEm;
+	@DataContext("waterworks_application")
+	def appEm;
 
-	@DataContext("waterworks_newconnection_fee")
+	@DataContext("waterworks_application_fee")
 	def feeEm;
 
-	@DataContext("waterworks_newconnection_requirement")
+	@DataContext("waterworks_application_requirement")
 	def reqEm;
 
-	@DataContext("waterworks_newconnection_bom")
+	@DataContext("waterworks_application_bom")
 	def bomEm;
 
 	private def buildFacts( def o ) {
 		def facts = [];
-		facts << new WaterApplication(apptype: "NEWCONNECTION", classification:o.account.classification.objid);
+		facts << new WaterApplication(apptype: o.apptype, classification:o.account.classification.objid);
 		o.account.attributes.each {
 			facts << new WaterworksAttribute(name: it);
 		};
@@ -37,7 +37,7 @@ class WaterworksNewConnectionService {
 	@ProxyMethod
 	public def buildRequirements( def o ) {
 		if(!o.appid) throw new Exception("appid is required in WaterworksNewConnectionService.buildRequirements")
-		def app = newConnEm.find( [objid: o.appid ]).first();
+		def app = appEm.find( [objid: o.appid ]).first();
 		throw new Exception("app " + app.account.attributes);
 		def facts = buildFacts( app );
 
@@ -52,8 +52,8 @@ class WaterworksNewConnectionService {
 
 	@ProxyMethod
 	public def buildFees(def o) {
-		if(!o.appid) throw new Exception("appid is required in WaterworksNewConnectionService.buildFees")
-		def app = newConnEm.find( [objid: o.appid ]).first();
+		if(!o.appid) throw new Exception("appid is required in WaterworksApplicationService.buildFees")
+		def app = appEm.find( [objid: o.appid ]).first();
 		def req = [rulename:'waterworksbilling'];
 		req.factBuilder = new FactBuilder();
 		req.factBuilder.facts = buildFacts( app );
@@ -67,6 +67,13 @@ class WaterworksNewConnectionService {
 			feeEm.create( [item: [objid:it.billcode], amount: it.amount, amtpaid: 0, appid: o.appid ] );
 		}
 		return [total: feeEm.find([appid: o.appid]).select("amt:{SUM(amount)}").val()];
+	}
+
+	@ProxyMethod
+	public def clearFees(def o) {
+		if(!o.appid) throw new Exception("appid is required in WaterworksApplicationService.clearFees")
+		feeEm.find([appid: o.appid]).delete();
+		return [total: 0];
 	}
 
 }

@@ -1,5 +1,5 @@
 <schema>
-	<element tablename="waterworks_newconnection_task">
+	<element tablename="waterworks_application_task">
 		<field name="taskid" primary="true" prefix="WNCONNTASK"/>
 		<field name="refid" required="true"/>
 		<field name="parentprocessid" />

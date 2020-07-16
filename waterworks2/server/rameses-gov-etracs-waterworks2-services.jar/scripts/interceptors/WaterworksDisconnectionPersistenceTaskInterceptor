@@ -1,7 +1,7 @@
 import com.rameses.annotations.*;
 import treasury.facts.*;
 
-class WaterworksDisconnectReconnectPersistenceTaskInterceptor {
+class WaterworksDisconnectionPersistenceTaskInterceptor {
 	
 	@Service("DateService")
 	def dateSvc;
@@ -26,10 +26,6 @@ class WaterworksDisconnectReconnectPersistenceTaskInterceptor {
 
 	@DataContext("waterworks_disconnection_task")
 	def disconnectionTaskEm;
-
-	
-	@DataContext("waterworks_reconnection")
-	def reconnectionEm;
 
 	//DISCONNECTION
 	@Before(pattern="PersistenceService.create", eval="#{ args[0]._schemaname == 'waterworks_disconnection'}")
@@ -68,40 +64,7 @@ class WaterworksDisconnectReconnectPersistenceTaskInterceptor {
 		def dc = disconnectionEm.find( [objid: p.refid] ).first();
 		acctEm.find( [objid: dc.acctid ] ).update( [state: "DISCONNECTED" ] );
 	}
-
-	//RECONNECTION
-	@Before(pattern="PersistenceService.create", eval="#{ args[0]._schemaname == 'waterworks_reconnection'}")
-	void beforeCreateReconnection( evt ) {
-		def p = evt.args[0]; 
-		def pattern = var.waterworks_reconnection_controlno_format;
-		if(!pattern) throw new Exception("Please specify waterworks_reconnection_controlno_format in sys_var");
-		p.controlno = controlNoSvc.getNextNo(pattern);
-		p.acctid = p.account.objid;
-		p.acctinfoid = p.account.acctinfoid;
-	}
-
-	@After(pattern="PersistenceService.create", eval="#{ args[0]._schemaname == 'waterworks_reconnection'}")
-	void afterCreateReconnection( evt ) {
-		def result = evt.result; 
-		def wf = [:];
-		wf.processname = 'waterworks_reconnection';
-		wf.refid = result.objid;
-		wf.startdate = dateSvc.serverDate;
-		taskSvc.start( wf );
-	}
-
-	@Before(pattern="WorkflowTaskService.signal", eval="#{ args[0].processname == 'waterworks_reconnection' && args[0].action == 'approve'  }")
-	public void beforeApproveReconnection( evt ) {
-		def p = evt.args[0]; 
-		//we must check the consumption must be updated.
-	}
-
-	@After(pattern="WorkflowTaskService.signal", eval="#{ args[0].processname == 'waterworks_reconnection' && args[0].action == 'approve'  }")
-	public void afterApproveReconnection( evt ) {
-		def p = evt.args[0]; 
-		def dc = reconnectionEm.find( [objid: p.refid] ).first();
-		acctInfoEm.find( [objid: dc.acctid ] ).update( [state: "ACTIVE" ] );
-	}
+	
 
 
 } 
