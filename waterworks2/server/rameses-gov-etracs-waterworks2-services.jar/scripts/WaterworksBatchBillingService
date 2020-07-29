@@ -45,6 +45,9 @@ class WaterworksBatchBillingService {
 		o.state = 'DRAFT';	
 		o = batchEm.create( o ); 
 
+		//we also need to update all accounts included in this subarea excludeinbatch to 0;
+		batchEm.resetExcludeInBatchAccounts( [subareaid: o.subarea.objid ] );
+
 		def p = [:];
 		p.processname = 'waterworks_batch_billing';
 		p.refid = o.objid;
@@ -106,6 +109,7 @@ class WaterworksBatchBillingService {
 			p.limit = batch_process_size;
 			items = batchEm.getAccountsForBilling( p );
 			items?.each {
+				//check if bill already exists. do not create it
 				try {
 					def vv = [acctid: it.objid, year:it.year,month:it.month,scheduleid:it.scheduleid, batchid: o.batchid];
 					vv.billnoformat = o.batchid + "-[%05d]"; 
@@ -209,15 +213,16 @@ class WaterworksBatchBillingService {
 		if(batch.year!=bill.year && batch.month!=bill.month)
 			throw new Exception("The bill's period does not match the batch billing period");
 
+		//allow rejoin batch anytime provided the year and month is the same as the batch.
+		/*
 		if(batch.task.state?.toLowerCase() == 'mobile-reading' )
-			throw new Exception("This bill is currently for mobile reading. It cannot be joined at this time");
-
-		//if batch state is for reading	
-		if( bill.state == 'OPEN' && batch.task.state?.toLowerCase() != 'for-reading' ) 
-			throw new Exception("This bill (open) can only joined to batch that is for-reading state ");		
+			throw new Exception("This bill is currently for mobile reading. It cannot be joined at this time");	
+		if( bill.state == 'OPEN' && !batch.task.state?.toLowerCase().matches('draft|for-reading') ) 
+			throw new Exception("This bill (open) can only be joined to batch that is in draft or for-reading state");		
 
 		if( bill.state == 'POSTED' && batch.task.state?.toLowerCase() != 'approved' ) 
-			throw new Exception("This bill (posted) can only joined to batch that is in approved state ");		
+			throw new Exception("This bill (posted) can only be joined to batch that is in approved state ");
+		*/	
 
 		billEm.find([objid: bill.objid]).update([batchid: batch.objid]);
 
@@ -226,5 +231,12 @@ class WaterworksBatchBillingService {
 
 		return [batchid: batch.objid];			
 	}
+
+	@ProxyMethod
+	public def excludeInBatch( def o ) {
+		if(!o.acctid) throw new Exception("acctid is required in WaterworksBatchBillingService.excludeInBatch");
+		acctEm.find( [objid: o.acctid ]).update( [excludeinbatch: 1]);
+	}
+
 
 } 

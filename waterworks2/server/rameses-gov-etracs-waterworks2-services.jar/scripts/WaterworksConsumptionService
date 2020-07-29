@@ -73,8 +73,8 @@ class WaterworksConsumptionService {
     public def calcAndUpdate( def o ) {
         if(!o.acctid) throw new Exception("acctid is required in WaterworksConsumptionService.calcAndUpdate");
         if(!o.meterstate) throw new Exception("meterstate is required in WaterworksConsumptionService.calcAndUpdate");
-        if(!o.prevreading) throw new Exception("prev.reading is required in WaterworksConsumptionService.calcAndUpdate");
-        if(!o.reading) throw new Exception("reading is required in WaterworksConsumptionService.calcAndUpdate");
+        if(o.prevreading==null) throw new Exception("prev.reading is required in WaterworksConsumptionService.calcAndUpdate");
+        if(o.reading==null) throw new Exception("reading is required in WaterworksConsumptionService.calcAndUpdate");
         if(!o.meterstate) throw new Exception("meterstate is required in WaterworksConsumptionService.calcAndUpdate");
         if(!o.consumptionid) throw new Exception("consumptionid is required in WaterworksConsumptionService.calcAndUpdate");
 
@@ -98,6 +98,14 @@ class WaterworksConsumptionService {
     @ProxyMethod
     public def updateHold( def o ) {
         consumptionEm.find([objid:o.consumptionid]).update( [hold: o.hold] );
+    }
+
+    @ProxyMethod
+    public def addConsumption( def o ) {
+        o.volume = 0;
+        o.amount = 0;
+        o.hold = 0;
+        consumptionEm.create(o);
     }
 
 }

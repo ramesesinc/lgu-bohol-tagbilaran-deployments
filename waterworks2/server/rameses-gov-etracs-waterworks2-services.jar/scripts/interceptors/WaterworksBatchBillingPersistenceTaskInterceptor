@@ -21,6 +21,9 @@ class WaterworksBatchBillingTaskInterceptor {
 	@DataContext("vw_waterworks_bill")
 	def vwBillEm;
 
+	@DataContext("vw_waterworks_consumption")
+	def vwConsumptionEm;
+
 	@Service("WaterworksScheduleService")
 	def skedSvc;
 
@@ -49,6 +52,14 @@ class WaterworksBatchBillingTaskInterceptor {
 		}
 	}
 
+	@Before(pattern="WorkflowTaskService.signal", eval="#{ args[0].processname == 'waterworks_batch_billing' && args[0].action == 'send-for-mobile-reading'  }")
+	public void checkPrevReadingBeforeMobileReading( evt ) {
+		def p = evt.args[0]; 
+		def cnt = vwConsumptionEm.find( [batchid: p.refid ] ).select( "c:{COUNT(*)}" ).where("prev.reading IS NULL").val();
+		if( cnt > 0 ) 
+			throw new Exception("Some entries do not have previous readings. Please make sure that all previous readings are entered");
+	}
+
 	@Before(pattern="WorkflowTaskService.signal", eval="#{ args[0].processname == 'waterworks_batch_billing' && args[0].action == 'submit-for-reading'  }")
 	public void checkErrorsBeforeProcess( evt ) {
 		def p = evt.args[0]; 
@@ -62,10 +73,9 @@ class WaterworksBatchBillingTaskInterceptor {
 		def p = evt.args[0]; 
 		def batch = batchEm.find([objid: p.refid]).first();			
 
-		def errs = vwBillEm.find( [batchid: p.refid ]).select("c:{COUNT(*)}").where( "meterstate='ACTIVE' AND consumption.hold=0 AND consumption.volume=0" ).val();
-		if( errs!=null && errs > 0 ) 
-			throw new Exception("All accounts with active meters that are not on hold must have a volume consumption");
-
+		def unreadCount = vwConsumptionEm.find( [batchid: batch.objid ]).where("reading IS NULL").select("c:{COUNT(*)}").val();
+		if( unreadCount > 0 ) 
+			throw new Exception("There should be no unread items");
 	}
 
 	@Before(pattern="WorkflowTaskService.signal", eval="#{ args[0].processname == 'waterworks_batch_billing' && args[0].action == 'close-batch'  }")

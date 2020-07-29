@@ -1,7 +1,7 @@
 <schema>
 	<element tablename="waterworks_payment" autopost="true">
 		<field name="objid" primary="true" prefix="WP"/>
-		<field name="acctid" required="true"/>		
+		<field name="acctid" />		
 		<field name="refno" required="true" caption="Ref No"/>
 		<field name="reftype" required="true" caption="Ref Type"/>
 		<!-- soft link to refid like cashreceipt -->
@@ -18,14 +18,17 @@
 		</complex>	
 		<field name="remarks" />
 
-		<!-- this is to mark the billid being paid. optional applicable only to billing and deposit transactions -->
+		<!-- if payment made for bill -->
 		<field name="billid" />
 
-		<!-- link to application if applicable -->		
+		<!-- if payment made for application -->		
 		<field name="appid" />
 
-		<!-- refer to cash receipt initial payment -->
-		<field name="pmttxntype"/>
+		<!-- if payment made for compromise -->		
+		<field name="compromiseid" />
+
+		<!-- refer to either billing,application or compromise -->
+		<field name="pmttxntype" required="true"/>
 		<field name="txndate"/>
 	</element>
 </schema>

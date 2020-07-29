@@ -21,4 +21,4 @@ services:
       - ../_res/connections:/apps/server/services/apps/enterprise/connections/ext
       - ./server/rameses-gov-etracs-waterworks2-report-services.jar:/apps/server/services/apps/enterprise/modules/rameses-gov-etracs-waterworks2-report-services.jar      
       - ./server/rameses-gov-etracs-waterworks2-services.jar:/apps/server/services/apps/enterprise/modules/rameses-gov-etracs-waterworks2-services.jar
-
+      - ./server/rameses-enterprise-services.jar:/apps/server/services/modules/rameses-enterprise-services.jar

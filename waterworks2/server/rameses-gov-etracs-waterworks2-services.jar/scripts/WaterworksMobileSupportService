@@ -4,10 +4,13 @@ import com.rameses.util.*;
 import com.rameses.functions.*;
 import java.text.*;
 
-class WaterworksMobileSupporService {
+class WaterworksMobileSupportService {
 
 	@Service("WaterworksBillingRuleService")
 	def ruleSvc;
+
+	@Service("WaterworksComputationService")
+    def compSvc;
 
 	@ActiveDB("wm_mobile_reading")
 	def mobileEm;
@@ -24,11 +27,26 @@ class WaterworksMobileSupporService {
 	@DataContext("waterworks_bill")
 	def billEm;
 
+	@DataContext("vw_waterworks_bill")
+	def vwBillEm;
+
 	@DataContext("waterworks_batch_billing")
 	def batchBillingEm;
 
 	@DataContext("waterworks_billitem")
 	def billItemEm;
+
+	@DataContext("vw_waterworks_batch_billing")
+	def vwBatchBillingEm;
+
+
+	@ProxyMethod
+	public def getBatches( def o ) {
+		if(!o.readerid) return  [ status: 'ERR', message: "Please pass readerid" ];
+		def list = vwBatchBillingEm.where( "reader.objid = :readerid AND task.state = :state ", [readerid: o.readerid, state:"mobile-reading" ] ).select("batchid:{objid}").list();
+		if(!list ) return [ status: 'ERR', message: "There are no batches to process" ];
+		return list;
+	}
 
 	@ProxyMethod
 	public def getBatch( def o ) {
@@ -83,8 +101,23 @@ class WaterworksMobileSupporService {
 	public def uploadReadings( def o ) {
 		if(!o.data ) return [ status: 'ERR', message: "data is required in uploadReadings" ];
 		o.data.each {
-			def bill = billEm.find([objid: it.objid]).first();
-			consumptionEm.find( [objid: bill.consumptionid ] ).update( [reading: it.reading] );
+			def bill = vwBillEm.find([objid: it.objid]).first();
+
+			def z = [:];
+	        z.acctid = bill.acctid;
+	        z.meterstate = bill.meterstate;
+	        z.prevreading = bill.consumption.prev.reading;
+	        z.reading = it.reading;
+	        def res = compSvc.compute(z);
+        
+	        def u = [:];
+	        u.reading = it.reading;
+	        u.volume = res.volume;
+	        u.amount = res.amount;   
+	        u.reader = it.reader;
+	        u.readingdate = it.readingdate;
+
+			consumptionEm.find( [objid: bill.consumptionid ] ).update( u );
 			def a = [:];
 			if( it.lng ) a.lng = it.lng;
 			if( it.lat ) a.lat = it.lat;
