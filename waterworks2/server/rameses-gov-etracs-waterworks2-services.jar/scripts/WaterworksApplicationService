@@ -54,7 +54,7 @@ class WaterworksApplicationService {
 	public def buildFees(def o) {
 		if(!o.appid) throw new Exception("appid is required in WaterworksApplicationService.buildFees")
 		def app = appEm.find( [objid: o.appid ]).first();
-		def req = [rulename:'waterworksbilling'];
+		def req = [rulename:'waterworksapplication'];
 		req.factBuilder = new FactBuilder();
 		req.factBuilder.facts = buildFacts( app );
 		req.params = [objid:app.objid];
