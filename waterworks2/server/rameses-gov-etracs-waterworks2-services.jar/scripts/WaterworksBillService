@@ -401,8 +401,8 @@ class WaterworksBillService {
 		}
 
 		//check if any of the billitems are already paid. Do not revert if there are payments already made.
-		//def pmt = pmtEm.find( [billid: bill.objid] ).first();
-		//if( pmt ) throw new Exception("This bill cannot be reopened because payments are already made");
+		def pmt = pmtEm.find( [billid: bill.objid] ).first();
+		if( pmt ) throw new Exception("This bill cannot be reopened because payments are already made");
 		clearSurcharges( [objid: bill.objid]);
 
 		billEm.find( [objid: bill.objid ]).update( [state: "OPEN", dtposted: "{NULL}" ] );
