@@ -15,8 +15,6 @@ services:
       TZ: "Asia/Manila"
     ports:
       - "8500:80"
-    volumes:
-      - ./dev_conf.d:/etc/nginx/conf.d
 
 
   gdx-client:
@@ -38,5 +36,3 @@ services:
       - "8571:8571"
     volumes:
       - ../../_res/connections:/apps/gdx/connections/ext
-
-      - ./app.conf:/apps/gdx/app.conf
