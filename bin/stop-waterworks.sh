@@ -1,6 +1,6 @@
 #!/bin/sh
 RUN_DIR=`pwd`
-cd ../waterworks
+cd ../appserver/waterworks
 docker-compose down
 docker system prune -f
 cd $RUN_DIR
