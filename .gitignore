@@ -10,3 +10,4 @@ docker-compose-test.yml
 *.mp4
 download-server/resources/downloads/**/*.xml
 c:
+/system/jasper/output
