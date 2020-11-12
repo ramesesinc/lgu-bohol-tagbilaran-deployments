@@ -25,14 +25,13 @@ class JasperReportEmailService  {
 		if(!o.to) throw new Exception("to is required in JasperReportEmailService.send");
 		if(!o.connection) throw new Exception("email connection is required in JasperReportEmailService.send");
 
+
 		def attachments = o.attachments;
 		if( attachments ) {
 			attachments.each { p->
 				if(!p.filename) {
 					def token = jasperSvc.generateReport( p );
 					p.filename = outputReportPath + token.tokenid + "." + ( p.ext ? p.ext : "pdf" );			
-				} else if (!p.filename.startsWith("/")) {
-					p.filename = outputReportPath + p.filename;
 				}
 				if(!p.title) p.title = p.filename;
 			}
