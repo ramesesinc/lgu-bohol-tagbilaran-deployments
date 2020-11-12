@@ -18,7 +18,7 @@ services:
 
 
   gdx-client:
-    image: "ramesesinc/gdx-client:1.02.001"
+    image: "ramesesinc/gdx-client:1.03.01"
     container_name: gdx-client
     restart: always
     logging: 
