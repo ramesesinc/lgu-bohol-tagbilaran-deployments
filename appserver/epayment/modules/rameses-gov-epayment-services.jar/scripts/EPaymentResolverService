@@ -50,8 +50,6 @@ class EPaymentResolverService {
                 pmt.txntype = po.txntype;
             }
 
-            println '\npmt -> '+ pmt;
-
             def pr = [:];
             pr.traceid = pmt.traceid;
             pr.tracedate = pmt.tracedate;
