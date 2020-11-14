@@ -161,6 +161,7 @@ class EPaymentService   {
                     def df = new java.text.SimpleDateFormat("yyyy-MM-dd");
                     o.tracedate = df.parse( o.tracedate );
                 }
+                println 'po.amount='+ po.amount +', o.amount='+ o.amount;
                 if(po.amount != o.amount) throw new Exception("Amount does not match");
                 if(po.txntype != o.txntype) throw new Exception("txntype does not match. Txntype passed is " + o.txntype );
                 po.partnerid = o.partnerid; 
