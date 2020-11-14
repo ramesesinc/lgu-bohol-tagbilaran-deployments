@@ -9,40 +9,47 @@ class OnlineLandTaxBillingService
 	@Service('RPTBillingService')
     def billSvc
 
-    @Service('RPTLedgerPostPaymentService')
-    def postPaymentSvc
-
+    
     def BARCODE_PREFIX = '56001:'
 
-	@ProxyMethod
-	public def verifyPayment( eor ) {
-        def data = eor.info.data;
-        def bill = generateBill([refno: data.billno])
-        eor.ledgers = [bill.rptledger]
-        eor.rptledger = bill.rptledger 
-        return [
-            ledgers: [bill.rptledger],
-            rptledger: bill.rptledger,
-            amount: eor.amount,
-            items: bill.rptledger.billitems,
-        ]
-	}
 
-	@ProxyMethod
-	public void postPayment( eor, bill ) {
-        def receipt = [:]
-        receipt.putAll(eor)
-        receipt.ledgers = bill.ledgers
-        receipt.rptledger = bill.rptledger
-        postPaymentSvc.postPayment(receipt) 
-        println 'Online realty tax payment successfully posted.'
-	}
-    
+    @ProxyMethod
+    public def getBilling( params ) { 
+        def bill = generateBill(params)
+        def rptledger = bill.rptledger
+
+        def data = [:]
+        data.info = [
+            billid: bill.objid,
+            billno: bill.barcode,
+            billdate: bill.billdate,
+            billtoyear: bill.billtoyear,
+            billtoqtr: bill.billtoqtr,
+            billperiod: buildPeriod(rptledger),
+            rptledgerid: rptledger.objid,
+            taxpayer: rptledger.taxpayer,
+            tdno: rptledger.tdno, 
+            fullpin: rptledger.fullpin, 
+            rputype: rptledger.rputype, 
+            administrator: rptledger.administrator, 
+            totalareasqm: rptledger.totalareasqm, 
+            totals: bill.totals,
+            items: rptledger.billitems,
+            amount: bill.totals.total,
+            fromyear: rptledger.fromyear,
+            fromqtr: rptledger.fromqtr,
+            toyear: rptledger.toyear,
+            toqtr: rptledger.toqtr,
+        ]
+        data.amount = bill.totals.total;
+        data.info.txntypename = 'Real Property Tax'; 
+        return data;
+    }
+
     @ProxyMethod
 	public def getEmailAttachments( eor ) {
         return []
     }
-
 
     def generateBill(params){
         def bill = [:]

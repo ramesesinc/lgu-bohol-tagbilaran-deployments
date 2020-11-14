@@ -76,7 +76,8 @@ class EPaymentService   {
     public def createPaymentOrder( def info ) {
         initEnv();       
 
-        if(!info.txntype) return [status:0, message:'txntype is required'];
+        if (!info.txntype) throw new Exception('txntype is required');
+        if (!info.txntypename) throw new Exception('txntypename is required');
 
         String locid = orgSvc.getRoot().code.replaceAll('-', ''); 
         info.objid =  KeyGen.generateAlphanumKey( locid.padRight( 6, "0" ), 12 );
@@ -88,7 +89,6 @@ class EPaymentService   {
         cal.setTime( info.txndate ); 
         cal.add( Calendar.HOUR, 24 ); 
         info.expirydate = new java.sql.Timestamp( cal.getTimeInMillis() ); 
-        if ( info.txntypename==null ) info.txntypename = info.txntype; 
         info.state = 'PENDING';
         def po = poEm.create( info ); 
 

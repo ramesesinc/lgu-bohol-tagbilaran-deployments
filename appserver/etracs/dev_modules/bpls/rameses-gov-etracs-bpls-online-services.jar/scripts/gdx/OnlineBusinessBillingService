@@ -7,6 +7,9 @@ public class OnlineBusinessBillingService {
 
 	@ProxyMethod
 	public def getBilling( data ) { 
-		return bplsSvc.getBilling( data );
+		def res = bplsSvc.getBilling( data );
+		res.info.txntype = 'bpls';
+		res.info.txntypename = 'Business Permit'; 
+		return res; 
 	}
 }

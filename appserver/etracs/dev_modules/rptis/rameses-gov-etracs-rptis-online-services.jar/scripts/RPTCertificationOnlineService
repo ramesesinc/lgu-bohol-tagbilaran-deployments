@@ -127,7 +127,6 @@ class RPTCertificationOnlineService {
 
 
 	def initTrueCopy(params) {
-		required('entityid', params.entityid);
 		required('faas', params.faas);
 		required('faas.objid', params.faas.objid);
 		required('faas.tdno', params.faas.tdno);
@@ -179,7 +178,6 @@ class RPTCertificationOnlineService {
 	}
 
 	def initTaxClearance(params) {
-		required('entityid', params.entityid);
 		required('faases', params.faases);
 		required('refid', params.refid);
 		required('reftype', params.reftype);
@@ -212,26 +210,15 @@ class RPTCertificationOnlineService {
 			}
 		}
 
-		def reportParams = reportSvc.getStandardParameter()
-
-		def certifiedby = reportParams.TREASURERNAME
-		def certifiedbytitle = reportParams.TREASURERTITLE
-
-		if (!certifiedby) {
-			certifiedby = var.LANDTAXCERTIFIEDBY
-			certifiedbytitle = var.LANDTAXCERTIFIEDBYTITLE
-		}
-
-		if (!certifiedby) {
-			certifiedby = 'SYSTEM'
-			certifiedbytitle = 'SYSTEM'
-		}
-
+		def treasurer = getTreasurer()
+		def certifiedby = treasurer ? treasurer.name : "SYSTEM"
+		def certifiedbytitle = treasurer ? treasurer.title : "SYSTEM"
+		
 		return [
 			objid            : params.certid,
         	opener           : 'rpttaxclearance',
-        	certifiedby      : 'SYSTEM',
-        	certifiedbytitle : 'SYSTEM',
+        	certifiedby      : certifiedby,
+        	certifiedbytitle : certifiedbytitle,
         	purpose          : params.purpose,
 			asofyear         : year,
 			year 			 : year,
@@ -313,5 +300,24 @@ class RPTCertificationOnlineService {
 			return onlineNoa
 		} 
 		return null
+	}
+
+
+	
+	@DataContext("city")
+	def em_city
+
+	@DataContext("municipality")
+	def em_muni
+
+	@DataContext("province")
+	def em_prov
+
+	@ProxyMethod
+	public def getTreasurer() {
+		def lgu = em_city.select("treasurer.*").where("1=1").first();
+		if (!lgu) lgu = em_prov.select("treasurer.*").where("1=1").first();
+		if (!lgu) lgu = em_muni.select("treasurer.*").where("1=1").first();
+		return lgu?.treasurer;
 	}
 }
