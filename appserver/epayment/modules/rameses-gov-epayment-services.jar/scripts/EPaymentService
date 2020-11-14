@@ -143,6 +143,18 @@ class EPaymentService   {
         err_db.create( err );         
     }
 
+    def toNumber( value ) {
+        try {
+            if ( value instanceof Number ) {
+                return value; 
+            }
+            return new BigDecimal(value.toString()); 
+        } 
+        catch(Throwable t) {
+            return null; 
+        }
+    }
+
     private def postEOR( def o, int laststate ) {
         if( laststate == 0 ) {
             int errstate = 0;
@@ -161,9 +173,14 @@ class EPaymentService   {
                     def df = new java.text.SimpleDateFormat("yyyy-MM-dd");
                     o.tracedate = df.parse( o.tracedate );
                 }
+
                 println 'po.amount='+ po.amount +', o.amount='+ o.amount;
-                if(po.amount != o.amount) throw new Exception("Amount does not match");
-                if(po.txntype != o.txntype) throw new Exception("txntype does not match. Txntype passed is " + o.txntype );
+                def amt1 = toNumber( po.amount ); 
+                def amt2 = toNumber( o.amount ); 
+                println 'amt1='+ amt1 +', amt2='+ amt2;
+
+                if (amt1 != amt2) throw new Exception("Amount does not match");
+                if (po.txntype != o.txntype) throw new Exception("txntype does not match. Txntype passed is " + o.txntype );
                 po.partnerid = o.partnerid; 
                 po.tracedate = o.tracedate; 
                 po.traceid = o.traceid;
