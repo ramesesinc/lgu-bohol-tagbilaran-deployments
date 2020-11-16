@@ -31,18 +31,3 @@ services:
 
       - ../../_res/connections:/apps/etracs25/connections/ext      
       - ../../_custom/module-server:/apps/etracs25/modules/ext/zzz-lgu-custom-module
-
-      - ./dev_modules/gov:/gov
-      - ./dev_modules/gov/module.conf:/apps/etracs25/modules.conf.d/_gov.conf
-
-      - ./dev_modules/treasury:/treasury
-      - ./dev_modules/treasury/module.conf:/apps/etracs25/modules.conf.d/_treasury.conf
-
-      - ./dev_modules/rptis:/rptis
-      - ./dev_modules/rptis/module.conf:/apps/etracs25/modules.conf.d/rptis.conf
-
-      - ./dev_modules/bpls:/bpls
-      - ./dev_modules/bpls/module.conf:/apps/etracs25/modules.conf.d/bpls.conf
-
-      - ./dev_modules/rameses-enterprise-admin-services.jar:/services/modules/01-rameses-enterprise-admin-services.jar
-      - ./dev_modules/rameses-enterprise-financial-services.jar:/services/modules/rameses-enterprise-financial-services.jar
