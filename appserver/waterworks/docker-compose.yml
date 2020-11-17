@@ -17,5 +17,5 @@ services:
     ports: 
       - "8076:8070"
     volumes:
-      - ../../_res/connections:/apps/enterprise/connections/ext
+      - ../../_res/connections:/enterprise/connections/ext
       - ../../_custom/datasources/waterworksds:/services/datasources/mainds
