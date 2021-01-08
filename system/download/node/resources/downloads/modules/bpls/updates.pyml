@@ -1,0 +1,8 @@
+app:
+
+   env:
+
+   modules:
+      - { order: 250, version: 2.51, file: "modules/bpls/rameses-gov-etracs-bpls.jar" }
+      - { order: 251, version: 2.51, file: "modules/bpls/rameses-gov-etracs-bpls-ceo.jar" }
+      - { order: 252, version: 2.51, file: "modules/bpls/rameses-gov-etracs-bpls-reports.jar" }
