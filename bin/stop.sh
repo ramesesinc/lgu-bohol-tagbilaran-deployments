@@ -19,8 +19,6 @@ cd $BASE_DIR/system/gdx-client && docker-compose down
 
 cd $BASE_DIR/system/notification && docker-compose down
 
-cd $BASE_DIR/system/jasper && docker-compose down
-
 cd $BASE_DIR/system/download && docker-compose down
 
 cd $BASE_DIR/system/queue && docker-compose down

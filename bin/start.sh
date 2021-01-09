@@ -10,8 +10,6 @@ cd $BASE_DIR/email/mail-primary && docker-compose up -d
 
 cd $BASE_DIR/system/notification && docker-compose up -d
 
-cd $BASE_DIR/system/jasper && docker-compose up -d
-
 cd $BASE_DIR/system/download && docker-compose up -d
 
 cd $BASE_DIR/system/queue && docker-compose up -d

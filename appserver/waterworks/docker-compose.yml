@@ -4,7 +4,7 @@ services:
 
   waterworks-server:
     container_name: waterworks-server
-    image: ramesesinc/local-waterworks-server:2.5.01.01.01
+    image: ramesesinc/local-waterworks-server:2.5.01.01.02
     restart: always
     logging: 
       driver: "json-file"
