@@ -11,6 +11,8 @@ docker-compose-test.yml
 *.mp4
 download-server/resources/downloads/**/*.xml
 c:
+bin/test
 /system/jasper/output
 /system/gdx-client/test
-bin/test
+/appserver/epayment/test
+/appserver/etracs/test
