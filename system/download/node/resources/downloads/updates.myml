@@ -1,6 +1,6 @@
 app: 
   env:
-    "app.title" : "ETRACS 2.5 build 05 20210106 (${lgu_name})"
+    "app.title" : "ETRACS 2.5 build 05 20210114 (${lgu_name})"
     "app.host" : "${app_server_ip}:8070"
     "app.cluster" : "osiris3"
     "app.context" : "etracs25"
@@ -18,9 +18,9 @@ app:
     - { order: 100, version: 2.51, file: "modules/core/osiris2-client-themes.jar" }
     - { order: 101, version: 2.51, file: "modules/core/osiris2-client-ui.jar" }
     - { order: 102, version: 2.51, file: "modules/core/osiris2-draw.jar" }
-    - { order: 103, version: 2.51, file: "modules/core/osiris2-framework.jar" }
+    - { order: 103, version: 2.52, file: "modules/core/osiris2-framework.jar" }
     - { order: 104, version: 2.51, file: "modules/core/osiris2-report.jar" }
-    - { order: 105, version: 2.52, file: "modules/core/rameses-client-ui.jar" }
+    - { order: 105, version: 2.53, file: "modules/core/rameses-client-ui.jar" }
     - { order: 106, version: 2.51, file: "modules/core/rameses-client-ui-bio.jar" }
     - { order: 107, version: 2.53, file: "modules/core/rameses-client-ui-jfx.jar" }
     - { order: 108, version: 2.50, file: "modules/core/rameses-client-notification-socketio.jar" }
@@ -48,9 +48,3 @@ app:
     - { order: 205, version: 2.50, file: "modules/etracs/rameses-gov-etracs-signatory-template.jar" }
     - { order: 206, version: 2.50, file: "modules/etracs/rameses-gov-lgu.jar" }
     - { order: 207, version: 2.50, file: "modules/etracs/rameses-gov-lgu-treasury.jar" }
-    # treasury
-    - { order: 220, version: 2.50, file: "modules/treasury/rameses-treasury-common.jar" }
-    - { order: 221, version: 2.50, file: "modules/treasury/rameses-gov-depositslip.jar" }
-    - { order: 222, version: 2.52, file: "modules/treasury/rameses-gov-treasury.jar" }
-    - { order: 223, version: 2.52, file: "modules/treasury/rameses-gov-treasury-report.jar" }
-    - { order: 224, version: 2.50, file: "modules/treasury/rameses-gov-treasury-tool.jar" }
