@@ -13,3 +13,4 @@ download-server/resources/downloads/**/*.xml
 c:
 /system/jasper/output
 /system/gdx-client/test
+bin/test
