@@ -4,7 +4,7 @@ services:
 
   etracs-server:
     container_name: etracs-server
-    image: ramesesinc/etracs-server-city:2.5.02.07.01
+    image: ramesesinc/etracs-server-city:2.5.02.06.01
     restart: always
     logging:
       driver: "json-file"
@@ -23,6 +23,7 @@ services:
       - "8070:8070"
     volumes:
       - ./modules:/apps/etracs25/modules
+      - ./dev-modules/rptis:/services/modules/rptis
 
       - ../../_custom/datasources:/services/datasources
       - ../../_res/connections:/apps/etracs25/connections/ext
