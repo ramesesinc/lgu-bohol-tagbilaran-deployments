@@ -12,6 +12,8 @@ app:
     "ws.host" : "${app_server_ip}:8060"
     "#res.host" : "${app_server_ip}"
     "socketio.host" : "${app_server_ip}:7080"
+    "rpt.app.host" : "${app_server_ip}:8070"
+    "rpt.app.context" : "etracs25"
 
   modules:
     # core
