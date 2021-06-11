@@ -19,3 +19,5 @@ services:
     volumes:
       - ../../_res/connections:/enterprise/connections/ext
       - ../../_custom/datasources/waterworksds:/services/datasources/mainds
+
+      - ./modules:/enterprise/modules
