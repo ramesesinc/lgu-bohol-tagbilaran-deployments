@@ -1,6 +1,7 @@
 import com.rameses.annotations.*
 import com.rameses.util.*
 import com.rameses.common.*
+import java.math.*;
 
 
 /************************************************
@@ -145,12 +146,10 @@ class EPaymentService   {
 
     def toNumber( value ) {
         try {
-            if ( value instanceof Number ) {
-                return value; 
-            }
-            return new BigDecimal(value.toString()); 
+            return new BigDecimal(value.toString()).setScale(2, RoundingMode.HALF_UP); 
         } 
         catch(Throwable t) {
+            t.printStackTrace();
             return null; 
         }
     }
@@ -176,6 +175,7 @@ class EPaymentService   {
 
                 def amt1 = toNumber( po.amount ); 
                 def amt2 = toNumber( o.amount ); 
+
                 if (amt1 != amt2) throw new Exception("Amount does not match");
                 
                 if (po.txntype != o.txntype) throw new Exception("txntype does not match. Txntype passed is " + o.txntype );
@@ -198,6 +198,7 @@ class EPaymentService   {
 
                 amt1 = toNumber( bill.amount ); 
                 amt2 = toNumber( o.amount ); 
+
                 if ( amt1 != amt2 )
                     throw new Exception("Bill amount that does not match with specified amount");
 
@@ -247,6 +248,7 @@ class EPaymentService   {
             return true;
         }
         catch( ex ) {
+            ex.printStackTrace();
             sendError( 0, 2, eor.paymentrefid, ex );
             return false;
         }   
