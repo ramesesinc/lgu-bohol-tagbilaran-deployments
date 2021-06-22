@@ -65,7 +65,7 @@ class WaterworksBillStatementService {
 		//do not include non cash receipt payments
 		def pmtItems = pmtEm.find( [billid: bill.objid ] ).where("voided = 0 ").list();
 		pmtItems.each {
-			if(it.reftype == "cashreceipt") {
+			if(it.reftype.toString().matches("cashreceipt|eor")) {
 				def m = [:];
 				m.txndate = it.refdate;
 				m.particulars = "Payment Ref No : " + it.refno;

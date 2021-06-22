@@ -339,7 +339,7 @@ class WaterworksBillService {
 		if( v.totalsurcharge == null ) v.totalsurcharge = 0;
 
 		//get total payments
-		v.totalpayment = pmtEm.find([billid: bill.objid ]).where("reftype = 'cashreceipt' AND voided=0").select("c:{SUM(amount)}").val();
+		v.totalpayment = pmtEm.find([billid: bill.objid ]).where("reftype in ('cashreceipt','eor') AND voided=0").select("c:{SUM(amount)}").val();
 		if(v.totalpayment == null) v.totalpayment = 0;
 
 		v.totaldiscount = pmtEm.find([billid: bill.objid ]).select("c:{SUM(discount)}").where("voided = 0").val();

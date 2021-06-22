@@ -176,7 +176,7 @@ class WaterworksRegularBillingPaymentService  {
         pmt.refno = rct.receiptno;
         if( !pmt.refno) pmt.refno = rct.refno;
 
-        pmt.reftype = "cashreceipt";
+        pmt.reftype = rct.reftype; 
         pmt.refid = rct.objid;
         pmt.amount = rct.amount;
         pmt.voided = 0;
@@ -196,6 +196,15 @@ class WaterworksRegularBillingPaymentService  {
         if(!param.billid) throw new Exception("billid required in WaterworksRegularBillingPaymentService.postPayment")
 	    if( param.reftype == "credit" ) postCredit( param );
         else if( param.reftype == "cashreceipt" ) postCashReceipt( param );
+
+        else if( param.reftype.toLowerCase() == "eor" ) { 
+            param.txnmode = ( param.txnmode ? param.txnmode : 'ONLINE'); 
+            postCashReceipt( param );
+        } 
+        else { 
+            throw new Exception("reftype '"+ param.reftype +"' payment is not supported"); 
+        } 
+        
         billSvc.updateBillTotals( [objid: param.billid] );
 	}
 
